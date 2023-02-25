@@ -1,6 +1,5 @@
 <?php
   require_once('includes/load.php');
-  if (!$session->isUserLoggedIn(true)) { redirect('index.php', false);}
 ?>
 
 <?php

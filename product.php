@@ -1,8 +1,6 @@
 <?php
   $page_title = 'All Product';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
-   page_require_level(2);
   $products = join_product_table();
 ?>
 <?php include_once('layouts/header.php'); ?>
@@ -10,6 +8,17 @@
      <div class="col-md-12">
        <?php echo display_msg($msg); ?>
      </div>
+     <header id="header">
+      <div class="logo pull-left"> Inventory System</div>
+      <div class="header-content">
+      <div class="header-date pull-left">
+        <h1>Welcome Inventory System</h1>
+      </div>
+     </div>
+    </header>
+    <div class="sidebar">
+      <?php include_once('menu.php');?>
+   </div>
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading clearfix">
