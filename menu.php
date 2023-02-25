@@ -16,7 +16,7 @@
    </ul>
   </li>
   <li>
-    <a href="categorie.php" >
+    <a href="#" >
       <i class="glyphicon glyphicon-indent-left"></i>
       <span>Categories</span>
     </a>
@@ -32,7 +32,7 @@
    </ul>
   </li>
   <li>
-    <a href="media.php" >
+    <a href="#" >
       <i class="glyphicon glyphicon-picture"></i>
       <span>Media Files</span>
     </a>
