@@ -23,7 +23,7 @@
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Photo</th>
-                <th> Product Title </th>
+                <th> Product name </th>
                 <th class="text-center" style="width: 10%;"> Categories </th>
                 <th class="text-center" style="width: 10%;"> In-Stock </th>
                 <th class="text-center" style="width: 10%;"> Buying Price </th>

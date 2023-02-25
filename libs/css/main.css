@@ -1,5 +1,5 @@
 body{
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins','Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -40,7 +40,7 @@ body{
 }
 
 .bg-green{
-  background-color: #A3C86D;
+  background-color: #008060;
 }
 .bg-blue{
   background-color: #7ACBEE;
@@ -57,7 +57,13 @@ body{
 }
 
 .bg-blue2{
-	background-color: #7a83ee;
+	background-color: #434486;
+;}
+
+.bg-blueOpacity{
+	background-color: #434486;
+  opacity: 0.3;
+;
 }
 .panel-default >.panel-heading{
   background-color: #f5f5f5;
