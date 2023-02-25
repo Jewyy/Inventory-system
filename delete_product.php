@@ -24,6 +24,7 @@
     <?php echo display_msg($msg); ?>
   </div>
   <div class="col-md-6">
+  <div class="headertext">Delete product</div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
@@ -35,8 +36,8 @@
         <form method="post">
           <div class="form-group">
             <input type="hidden" name="confirm" value="yes">
-            <button type="submit" class="btn btn-danger">Yes</button>
-            <a href="product.php" class="btn btn-default">No</a>
+            <a href="product.php" class="btn btn-default">Cancel</a>
+            <button type="submit" class="btn btn-danger">Delete product</button>
           </div>
         </form>
       </div>
