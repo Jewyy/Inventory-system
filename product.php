@@ -24,11 +24,11 @@
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Photo</th>
                 <th> Product Title </th>
-                <th class="text-center" style="width: 10%;"> Categories </th>
-                <th class="text-center" style="width: 10%;"> In-Stock </th>
-                <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Selling Price </th>
-                <th class="text-center" style="width: 10%;"> Product Added </th>
+                <th class="text-center" style="width: 10%; color:#78e6b8;" > Categories </th>
+                <th class="text-center" style="width: 10%; color:#78e6b8;"> In-Stock </th>
+                <th class="text-center" style="width: 10%; color:#78e6b8;"> Buying Price </th>
+                <th class="text-center" style="width: 10%; color:#78e6b8;"> Selling Price </th>
+                <th class="text-center" style="width: 10%; color:#78e6b8;"> Product Added </th>
                 <th class="text-center" style="width: 100px;"> Actions </th>
               </tr>
             </thead>
