@@ -19,7 +19,7 @@
       <div class="logo pull-left"> Inventory System</div>
       <div class="header-content">
       <div class="header-date pull-left">
-        <strong><?php echo date("F j, Y, g:i a");?></strong>
+        <strong><?php echo "test header ";?></strong>
       </div>
       <div class="pull-right clearfix">
         <ul class="info-menu list-inline list-unstyled">
@@ -54,20 +54,7 @@
      </div>
     </header>
     <div class="sidebar">
-      <?php if($user['user_level'] === '1'): ?>
-        <!-- admin menu -->
       <?php include_once('admin_menu.php');?>
-
-      <?php elseif($user['user_level'] === '2'): ?>
-        <!-- Special user -->
-      <?php include_once('special_menu.php');?>
-
-      <?php elseif($user['user_level'] === '3'): ?>
-        <!-- User menu -->
-      <?php include_once('user_menu.php');?>
-
-      <?php endif;?>
-
    </div>
 <?php endif;?>
 
