@@ -95,7 +95,10 @@ function read_date($str){
 /* Function for  Readable Make date time
 /*--------------------------------------------------------------*/
 function make_date(){
-  return strftime("%Y-%m-%d %H:%M:%S", time());
+  // return strftime("%Y-%m-%d %H:%M:%S", time());
+  $date = new DateTime('now', new DateTimeZone('UTC')); // Create a DateTime object for the current time in UTC
+  $date->setTimezone(new DateTimeZone('Asia/Bangkok')); // Set the time zone to Asia/Kolkata
+  return $date->format('Y-m-d H:i:s'); // Return the formatted date and time
 }
 /*--------------------------------------------------------------*/
 /* Function for  Readable date time
