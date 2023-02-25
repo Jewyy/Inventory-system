@@ -11,12 +11,12 @@
       <span>User Management</span>
     </a>
     <ul class="nav submenu">
-      <li><a href="group.php">Manage Groups</a> </li>
-      <li><a href="users.php">Manage Users</a> </li>
+      <li><a href="">Manage Groups</a> </li>
+      <li><a href="">Manage Users</a> </li>
    </ul>
   </li>
   <li>
-    <a href="categorie.php" >
+    <a href="#" >
       <i class="glyphicon glyphicon-indent-left"></i>
       <span>Categories</span>
     </a>
@@ -32,7 +32,7 @@
    </ul>
   </li>
   <li>
-    <a href="media.php" >
+    <a href="#" >
       <i class="glyphicon glyphicon-picture"></i>
       <span>Media Files</span>
     </a>
@@ -43,8 +43,8 @@
        <span>Sales</span>
       </a>
       <ul class="nav submenu">
-         <li><a href="sales.php">Manage Sales</a> </li>
-         <li><a href="add_sale.php">Add Sale</a> </li>
+         <li><a href="">Manage Sales</a> </li>
+         <li><a href="">Add Sale</a> </li>
      </ul>
   </li>
   <li>
@@ -53,9 +53,9 @@
        <span>Sales Report</span>
       </a>
       <ul class="nav submenu">
-        <li><a href="sales_report.php">Sales by dates </a></li>
-        <li><a href="monthly_sales.php">Monthly sales</a></li>
-        <li><a href="daily_sales.php">Daily sales</a> </li>
+        <li><a href="">Sales by dates </a></li>
+        <li><a href="">Monthly sales</a></li>
+        <li><a href="">Daily sales</a> </li>
       </ul>
   </li>
 </ul>

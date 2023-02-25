@@ -1,8 +1,6 @@
 <?php
   $page_title = 'Add Product';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
-  page_require_level(2);
   $all_categories = find_all('categories');
   $all_photo = find_all('media');
 ?>
@@ -30,7 +28,7 @@
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
        $session->msg('s',"Product added ");
-       redirect('add_product.php', false);
+       redirect('product.php', false);
      } else {
        $session->msg('d',' Sorry failed to added!');
        redirect('product.php', false);
