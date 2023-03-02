@@ -27,18 +27,19 @@
          </div>
         </div>
         <div class="panel-body">
-          <table class="table table-bordered">
+          <table class=product-table">
             <thead>
               <tr>
-                <th class="text-center" style="width: 50px;">#</th>
-                <th> Photo</th>
-                <th> Product Title </th>
-                <th class="text-center" style="width: 10%;"> Categories </th>
-                <th class="text-center" style="width: 10%;"> In-Stock </th>
-                <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Selling Price </th>
-                <th class="text-center" style="width: 10%;"> Product Added </th>
-                <th class="text-center" style="width: 100px;"> Actions </th>
+                <th class="product-tab" style="width: 50px;">No.</th>
+                <th class="product-tab" style="width: 50px;"> Photo</th>
+                <th class="product-tab" style="width: 50px;" > Product Name </th>
+                <th class="product-tab" style="width: 10%;"> Categories </th>
+                <th class="product-tab product-tab" style="width: 10%;"> In-stock </th>
+                <th class="product-tab" style="width: 10%;"> Buying Price </th>
+                <th class="product-tab" style="width: 10%;"> Selling Price </th>
+                <th class="product-tab" style="width: 10%;"> Product Add </th>
+                <th class="product-tab" style="width: 100px;"> Action </th>
+                
               </tr>
             </thead>
             <tbody>

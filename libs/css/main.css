@@ -320,3 +320,12 @@ input[type=file]{
   width: 125px;
   height: 125px;
 }
+.product-tab{
+  color: #8594A6;
+  text-align: center;
+  font-style: SemiBold;
+}
+.product-table{
+  border: none;
+  padding-bottom: 50px;
+}
