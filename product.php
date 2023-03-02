@@ -29,7 +29,7 @@
         <div class="panel-body">
           <table class=product-table">
             <thead>
-              <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; ">
+              <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
                 <th class="product-tab" style="width: 50px;">No.</th>
                 <th class="product-tab" style="width: 50px;"> Photo</th>
                 <th class="product-tab" style="width: 50px;" > Product Name </th>
