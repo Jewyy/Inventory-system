@@ -79,8 +79,8 @@
                </div>
               </div>
               <div class="form-group">
-                <div class="row">
-                  <div class="col-md-6">
+                <!-- <div class="row"> -->
+                  <!-- <div class="col-md-6"> -->
                     <p class="topic"><b>Product Category</b></p>
                     <select class="form-control" name="product-categorie">
                       <option value="">Select Product Category</option>
@@ -89,8 +89,8 @@
                         <?php echo $cat['name'] ?></option>
                     <?php endforeach; ?>
                     </select>
-                  </div>
-                  <div class="col-md-6">
+                  <!-- </div> -->
+                  <!-- <div class="col-md-6"> -->
                     <p class="topic"><b>Product Photo</b></p>
                     <select class="form-control" name="product-photo">
                       <option value="">Select Product Photo</option>
@@ -99,8 +99,8 @@
                         <?php echo $photo['file_name'] ?></option>
                     <?php endforeach; ?>
                     </select>
-                  </div>
-                </div>
+                  <!-- </div> -->
+                <!-- </div> -->
               </div>
 
               <div class="form-group">
@@ -136,7 +136,10 @@
                   </div>
                </div>
               </div>
-              <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
+              <div class="button" style="border: 1px solid black; text-align: center">
+                <button type="submit" name="add_product" class="btn btn-danger">Cancel</button>
+                <button type="submit" name="add_product" class="btn btn-success">Add</button>
+              </div>
           </form>
          </div>
         </div>
