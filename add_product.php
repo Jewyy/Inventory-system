@@ -61,16 +61,27 @@
          <div class="col-md-12">
           <form method="post" action="add_product.php" class="clearfix">
               <div class="form-group">
+                <p class="topic"><b>Product Name</b></p>
                 <div class="input-group">
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Product Title">
+                  <input type="text" class="form-control" name="product-title" placeholder="Enter Product Name">
+               </div>
+              </div>
+              <div class="form-group">
+                <p class="topic"><b>Product Details</b></p>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-th-large"></i>
+                  </span>
+                  <input type="text" class="form-control" name="product-title" placeholder="Enter Product Details">
                </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
+                    <p class="topic"><b>Product Category</b></p>
                     <select class="form-control" name="product-categorie">
                       <option value="">Select Product Category</option>
                     <?php  foreach ($all_categories as $cat): ?>
@@ -80,6 +91,7 @@
                     </select>
                   </div>
                   <div class="col-md-6">
+                    <p class="topic"><b>Product Photo</b></p>
                     <select class="form-control" name="product-photo">
                       <option value="">Select Product Photo</option>
                     <?php  foreach ($all_photo as $photo): ?>
@@ -94,6 +106,7 @@
               <div class="form-group">
                <div class="row">
                  <div class="col-md-4">
+                <p class="topic"><b>Product Quantity</b></p>
                    <div class="input-group">
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
@@ -102,6 +115,7 @@
                   </div>
                  </div>
                  <div class="col-md-4">
+                <p class="topic"><b>Buying Price</b></p>
                    <div class="input-group">
                      <span class="input-group-addon">
                        <i class="glyphicon glyphicon-usd"></i>
@@ -111,6 +125,7 @@
                   </div>
                  </div>
                   <div class="col-md-4">
+                  <p class="topic"><b>Selling Price</b></p>
                     <div class="input-group">
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-usd"></i>
