@@ -64,11 +64,11 @@ $products = join_product_table();
                 <td> <?php echo read_date($product["date"]); ?></td>
                 <td>
                   <div class="btn-group">
-                    <a href="edit_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-info btn-xs" title="Edit" data-toggle="tooltip">
-                      <span class="glyphicon glyphicon-edit"></span>
+                    <a href="edit_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-light" title="Edit" data-toggle="tooltip">
+                    <img src="./asset/trash.svg">
                     </a>
-                    <a href="delete_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-danger btn-xs" title="Delete" data-toggle="tooltip">
-                      <span class="glyphicon glyphicon-trash"></span>
+                    <a href="delete_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-light" title="Delete" data-toggle="tooltip">
+                    <img src="./asset/edit.svg">
                     </a>
                   </div>
                 </td>
