@@ -5,15 +5,15 @@
   //  page_require_level(2);
   $products = join_product_table();
 ?>
+<link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 <?php include_once('layouts/header.php'); ?>
   <div class="row">
      <div class="col-md-12 newfont">
        <?php echo display_msg($msg); ?>
-       <h1>Test NAME</h1>
+       <h1>Product System</h1>
      </div>
-   </div>
-    <div class="col-md-12 newfont">
-      <div class="panel ">
+    <div class="col-md-12">
+      <div class="panel panel-default">
         <div class="panel-heading clearfix">
          <div class="pull-right">
            <a href="add_product.php" class="btn btn-primary">+ Add New</a>

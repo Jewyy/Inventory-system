@@ -7,7 +7,7 @@ body{
   height: 100%;
   width: 100%;
 }a{
-  color #777;
+  color :#777;
   text-decoration: none;
 }.padding-top{
   padding-top: 20px;
@@ -38,7 +38,15 @@ body{
   left: 0;
   padding: 35px 15px 20px 270px;
 }
-
+:root {--Black: #000000; 
+  --White: #ffffff; 
+  --Disable:#939597;
+  --Texthint: #8594A6;
+  --Green:#008060;
+  --Red:#F97373;
+  --Outline:#D6D6D6;
+  --Purple:#6667AB;
+  --Blue:#434486;}
 .bg-green{
   background-color: #A3C86D;
 }
@@ -53,11 +61,11 @@ body{
 }
 
 .bg-secondary1{
-	background-color: #b17897;
+    background-color: #b17897;
 }
 
 .bg-blue2{
-	background-color: #7a83ee;
+    background-color: #7a83ee;
 }
 .panel-default >.panel-heading{
   background-color: #f5f5f5;
@@ -114,12 +122,7 @@ body{
     letter-spacing: 1px;
     display: inline-block;
     width: 250px;
-    background-color: #008060;
-}.table-header{
-  font-size:19px;
-  color:#008060;
-}.table-list{
-  color:#008060;
+    background-color: var(--Green);
 }.header-date{
   color: #9b9b9b;
   margin-left: 20px;
@@ -179,7 +182,7 @@ body{
   padding: 65px 0 0;
   height: 100%;
   width: 250px;
-  background: #f4faf9;
+  background: var(--White);  /*sidebar color*/
   border-right: 1px solid #ddd;
   text-align: center;
 }.sidebar ul li:hover,.submenu ul li:hover{
@@ -187,15 +190,20 @@ body{
   transition: all .2s ease-in-out;
 }.sidebar ul{
   list-style: none;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
+  padding-left: 22px;
 }.sidebar ul li {
   display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  justify-content: center;
 }.sidebar ul li:hover,ul.submenu{
   background-color:#EDEEEF;
-}.sidebar ul li a:hover,ul li i:hover {
-  /* color: white; */
-  color:#008060;
+}.sidebar ul li a:hover{
+  color: var(--Green);
+}.svg path{
+  stroke: var(--Green);
 }.sidebar ul li a,ul.submenu li a {
   color: black;
   display: block;
@@ -209,8 +217,8 @@ body{
   font-weight: 300;
   letter-spacing: 1.5px;
   /* text-shadow: 0 1px rgba(0,0,0, 1); */
-}.sidebar ul li i{  /*here*/
-  color:#008060;
+}.sidebar ul li a i{
+  color: #aeb2b7;
   padding: 15px 22px;
   text-align: center;
 }ul.submenu{
