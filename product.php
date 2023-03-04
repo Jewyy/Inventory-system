@@ -19,14 +19,17 @@ $products = join_product_table();
   <div class="sidebar">
     <?php include_once "menu.php"; ?>
   </div>
-  <div class="col-md-12">
-    <div class="panel panel-default">
-      <div class="panel-heading clearfix">
-        <div class="pull-right">
-          <a href="add_product.php" class="btn btn-primary">Add New</a>
+    <div style="background-color: white;">
+      <div class="clearfix" style="padding-bottom: 20px;">
+        <div class="pull-right" style="padding-right: 20px; padding-top: 20px;">
+          <a href="add_product.php" class="btn btn-success"> <img src="./asset/plus.svg">
+          <span style="padding-bottom: 15px;">
+             Add Product
+          </span>
+         </a>
         </div>
       </div>
-      <div class="panel-body">
+      <!-- <div class="panel-body"> -->
         <table class=product-table">
           <thead>
             <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
@@ -73,8 +76,7 @@ $products = join_product_table();
             <?php endforeach; ?>
           </tbody>
           </tabel>
-      </div>
+      <!-- </div> -->
     </div>
-  </div>
 </div>
 <?php include_once "layouts/footer.php"; ?>
