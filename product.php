@@ -25,6 +25,9 @@
          <div class="pull-right">
            <a href="add_product.php" class="btn btn-primary">Add New</a>
          </div>
+         <div class="pull-left">
+           <input type="text" id="search" placeholder="Search...">
+         </div>
         </div>
         <div class="panel-body">
           <table class="table table-bordered">
@@ -77,3 +80,14 @@
     </div>
   </div>
   <?php include_once('layouts/footer.php'); ?>
+  
+  <script>
+  $(document).ready(function() {
+    $("#search").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("tbody tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
