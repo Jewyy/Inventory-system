@@ -9,7 +9,6 @@
   <div class="row">
      <div class="col-md-12 newfont">
        <?php echo display_msg($msg); ?>
-       <h1>HBD N'mueylii</h1>
      </div>
     <div class="col-md-12">
       <div class="panel panel-default">
