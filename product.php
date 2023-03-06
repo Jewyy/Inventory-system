@@ -64,7 +64,7 @@ $products = join_product_table();
             <td class="display-font-table"> <?php echo remove_junk($product["quantity"]); ?></td>
             <td class="display-font-table"> <?php echo remove_junk($product["buy_price"]); ?></td>
             <td class="display-font-table"> <?php echo remove_junk($product["sale_price"]); ?></td>
-            <td> <?php echo read_date($product["date"]); ?></td>
+            <td style="font-weight:bold;"> <?php echo read_date($product["date"]); ?></td>
             <td>
               <div class="btn-group" style="padding-left: 15px;">
                 <a href="edit_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-light" title="Edit" data-toggle="tooltip">
