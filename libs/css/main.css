@@ -273,16 +273,16 @@ table tfoot tr td:first-child{
    transition: all 300ms ease-in-out;
 }.btn-primary {
     color: #fff;
-    background-color: #51aded;
+    background-color: red;
     border-color: #3d8fd8
 }.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active{
     color: #fff;
-    background-color: #3175b8;
+    background-color: red;
     border-color: #3d8fd8
 }.btn-success{
-   background-color:#2ecc71
+   background-color:#008060
 }.btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active{
-  background-color:#27ae60
+  background-color:#008060
 }.btn-warning{
   background-color: #e7c13e;
   border-color: #dfba3c;

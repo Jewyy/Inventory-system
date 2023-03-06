@@ -66,10 +66,10 @@ $products = join_product_table();
             <td>
               <div class="btn-group">
                 <a href="edit_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-light" title="Edit" data-toggle="tooltip">
-                  <img src="./asset/trash.svg">
+                  <img src="./asset/edit.svg">
                 </a>
                 <a href="delete_product.php?id=<?php echo (int) $product["id"]; ?>" class="btn btn-light" title="Delete" data-toggle="tooltip">
-                  <img src="./asset/edit.svg">
+                  <img src="./asset/trash.svg">
                 </a>
               </div>
             </td>
