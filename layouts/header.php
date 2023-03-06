@@ -21,15 +21,14 @@
     <header id="header">
       <div class="logo pull-left"> Inventory System</div>
       <div class="header-content">
-      <div class="header-date pull-left">
-        <strong><?php echo date("F j, Y, g:i a");?></strong>
-      </div>
+
       <div class="pull-right clearfix">
         <ul class="info-menu list-inline list-unstyled">
           <li class="profile">
             <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
-              <img src="uploads/users/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
-              <!-- <span><?php echo remove_junk(ucfirst($user['name'])); ?> <i class="caret"></i></span> -->
+              <span>testname</span>
+              <img src="uploads/users/no_image.png" alt="user-image" class="img-circle img-inline">
+              <!-- <span><i class="caret"></i></span> -->
             </a>
             <ul class="dropdown-menu">
               <li>
