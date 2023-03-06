@@ -3,7 +3,7 @@ body{
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #f1f2f7;
+  background: white;
   height: 100%;
   width: 100%;
 }a{
@@ -321,22 +321,6 @@ input[type=file]{
   height: 125px;
 }
 
-.product-tab-add-button{
-  border-radius: 3px;
-  background-color: #008060; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-.product-tab-add-button:hover, .product-tab-add-button:focus, .product-tab-add-button.focus, .product-tab-add-button:active, .product-tab-add-button.active{
-    color: #fff;
-    background-color: #008060;
-    border-color: #3d8fd8
-}
 .background-product{
   background-color: white;
   font-size: 15px;
@@ -346,24 +330,36 @@ input[type=file]{
 
 .product-tab{
   color: #8594A6;
-  text-align: center;
   font-style: SemiBold;
 }
 .product-table{
   border: none;
   padding-bottom: 50px;
   padding-top: 100px;
+  padding-left: 200px;
 }
 .product-row-style{
-  text-align: center;
+  font-style: Label Regular;
   height: 100px;
 }
 .category-button{
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  border-radius: 35px;
-  font-size: 12px;
-  text-align: center;
-  background-color: #000;
+  background-color: #272626; 
+  width:fit-content;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius:30px; 
+  color:white;
+  font-size: 15px;
+}
+.display-box{
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.display-font-table{
+  color: #434486;
+  font-weight:bold ;
 }
