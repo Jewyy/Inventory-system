@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="libs/css/main.css" />
   </head>
   <body>
-  <?php  if ($session->isUserLoggedIn(true)): ?>
+  <?php  if (true): ?>
     <header id="header">
       <div class="logo pull-left"> Inventory System</div>
       <div class="header-content">
@@ -26,7 +26,7 @@
           <li class="profile">
             <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
               <img src="uploads/users/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
-              <span><?php echo remove_junk(ucfirst($user['name'])); ?> <i class="caret"></i></span>
+              <!-- <span><?php echo remove_junk(ucfirst($user['name'])); ?> <i class="caret"></i></span> -->
             </a>
             <ul class="dropdown-menu">
               <li>
@@ -54,20 +54,7 @@
      </div>
     </header>
     <div class="sidebar">
-      <?php if($user['user_level'] === '1'): ?>
-        <!-- admin menu -->
       <?php include_once('admin_menu.php');?>
-
-      <?php elseif($user['user_level'] === '2'): ?>
-        <!-- Special user -->
-      <?php include_once('special_menu.php');?>
-
-      <?php elseif($user['user_level'] === '3'): ?>
-        <!-- User menu -->
-      <?php include_once('user_menu.php');?>
-
-      <?php endif;?>
-
    </div>
 <?php endif;?>
 
