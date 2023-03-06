@@ -154,7 +154,7 @@ align-items: flex-start;
 padding: 8px 0px;
 gap: 8px;
 height: 70px;
-background-color: #2ecc71;
+/* background-color: #2ecc71; */
 }
 .headertext{
 text-align: left;
@@ -376,7 +376,7 @@ align-items: center;
 padding: 0px;
 gap: 16px;
 width:100%;
-background-color: #b17897;
+
 }.input-group-addon{
 background-color: #fcfcfc;
 border: 1px solid #dbdbdb;
@@ -410,6 +410,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 0px;
-background-color: var(--Green);
+/* background-color: var(--Green); */
 gap: 32px;
 }
