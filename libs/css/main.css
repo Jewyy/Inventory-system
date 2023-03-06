@@ -190,19 +190,19 @@ body{
   transition: all .2s ease-in-out;
 }.sidebar ul{
   list-style: none;
-  /* margin: 0;
-  padding: 0; */
-  padding-left: 22px;
+  margin: 0;
+  padding: 0;
 }.sidebar ul li {
   display: block;
   padding-top: 7px;
   padding-bottom: 7px;
-  justify-content: center;
+  padding-left: 22px;
+  /* justify-content: center; */
 }.sidebar ul li:hover,ul.submenu{
   background-color:#EDEEEF;
 }.sidebar ul li a:hover{
   color: var(--Green);
-}.svg path{
+}.sidebar ul li a:hover svg g path{
   stroke: var(--Green);
 }.sidebar ul li a,ul.submenu li a {
   color: black;
