@@ -1,19 +1,149 @@
-<?php
-  $toggle=false;
-?>
 <ul>
   <li>
-    <a href="#" class="submenu-toggle">
-      <span style="padding-left:15px;">Products</span>
-      <svg class="sidebar-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.19997 6.40005C3.19997 6.19525 3.27837 5.99045 3.43437 5.83445C3.74717 5.52165 4.25277 5.52165 4.56557 5.83445L7.99997 9.26885L11.4344 5.83445C11.7472 5.52165 12.2528 5.52165 12.5656 5.83445C12.8784 6.14725 12.8784 6.65285 12.5656 6.96565L8.56557 10.9657C8.25277 11.2785 7.74717 11.2785 7.43437 10.9657L3.43437 6.96565C3.27837 6.80965 3.19997 6.60485 3.19997 6.40005Z" fill="#5C5F62"/>
+    <a href="admin.php">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <g clip-path="url(#clip0_220_1208)">
+        <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_220_1208">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
       </svg>
-        <!-- <i class="glyphicon glyphicon-chevron-down"></i> -->
-        <!-- <i class="glyphicon glyphicon-chevron-up"></i> -->
-    </a>  
-    <ul class="nav submenu">
-      <a href="product.php"><i class="glyphicon glyphicon-th-large"></i><span href="product.php">Manage Products</span> </a>
-      <a href="add_product.php"><i class="glyphicon glyphicon-th-large"></i><span href="add_product.php">Add Products</span> </a>
-   </ul>
+      <span>&nbsp;Dashboard</span>
+      
+    </a>
   </li>
+  <li>
+    <a href="usermanagement.php">    
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <g clip-path="url(#clip0_220_1208)">
+        <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_220_1208">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+      <span>&nbsp;User management</span>
+    </a>
+  </li>
+  <li>
+    <a href="category.php">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <g clip-path="url(#clip0_220_1208)">
+        <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_220_1208">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+      <span>&nbsp;Categories</span>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span>Products</span>
+         <li>
+            <a href="product.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Manage Products</a> 
+          </li>
+         <li>
+            <a href="add_product.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Add Products</a> 
+          </li>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span>Sales</span>
+      <li>
+            <a href="sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Manage Sales</a> 
+          </li>
+          <li>
+            <a href="add_sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Add Sales</a> 
+          </li>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span>Sales Report</span>
+      <li >
+            <a href="sales_report.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Sales by date</a> 
+          </li>
+          <li>
+            <a href="monthly_sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Monthly sales</a> 
+          </li>
+          <li>
+            <a href="daily_sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_220_1208)">
+                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_220_1208">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+             </svg>&nbsp;Daily sales</a> 
+          </li>
+    </a>
+  </li>
+
 </ul>

@@ -1,44 +1,39 @@
 <?php
   $page_title = 'All Product';
   require_once('includes/load.php');
+  // Checkin What level user has permission to view this page
+  //  page_require_level(2);
   $products = join_product_table();
 ?>
 <?php include_once('layouts/header.php'); ?>
   <div class="row">
-     <div class="col-md-12">
+     <div class="col-md-12 newfont">
        <?php echo display_msg($msg); ?>
      </div>
-     <header id="header">
-      <div class="logo pull-left"> Inventory System</div>
-      <div class="header-content">
-      <div class="header-date pull-left">
-        <h1>Welcome Inventory System</h1>
-      </div>
-     </div>
-    </header>
-    <div class="sidebar">
-      <?php include_once('menu.php');?>
-   </div>
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading clearfix">
          <div class="pull-right">
-           <a href="add_product.php" class="btn btn-primary">Add New</a>
+           <a href="add_product.php" class="btn btn-primary">+ Add New</a>
+         </div>
+         <div class="pull-left">
+           <input type="text" id="search" placeholder="Search...">
          </div>
         </div>
         <div class="panel-body">
-          <table class="table table-bordered">
+          <!-- <table class="table table-bordered"> -->
+          <table class="table">
             <thead>
               <tr>
-                <th class="text-center" style="width: 50px;">#</th>
-                <th> Photo</th>
-                <th> Product name </th>
-                <th class="text-center" style="width: 10%;"> Categories </th>
-                <th class="text-center" style="width: 10%;"> In-Stock </th>
-                <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Selling Price </th>
-                <th class="text-center" style="width: 10%;"> Product Added </th>
-                <th class="text-center" style="width: 100px;"> Actions </th>
+                <th class="text-center table-header" style="width: 50px;">No.</th>
+                <th class="table-header" > Photo</th>
+                <th class="table-header" > Product Name </th>
+                <!-- <th class="text-center" style="width: 10%; color:#78e6b8;"> Categories </th> -->
+                <th class="text-center table-header" style="width: 10%; "> In-Stock </th>
+                <th class="text-center table-header" style="width: 10%; "> Buying Price </th>
+                <th class="text-center table-header" style="width: 10%; "> Selling Price </th>
+                <th class="text-center table-header" style="width: 20%; "> Product Add </th>
+                <th class="text-center table-header" style="width: 100px; "> Actions </th>
               </tr>
             </thead>
             <tbody>
@@ -52,18 +47,20 @@
                   <img class="img-avatar img-circle" src="uploads/products/<?php echo $product['image']; ?>" alt="">
                 <?php endif; ?>
                 </td>
-                <td> <?php echo remove_junk($product['name']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['quantity']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['buy_price']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
-                <td class="text-center"> <?php echo read_date($product['date']); ?></td>
-                <td class="text-center">
+                <td style="font-size:20px;"> <?php echo remove_junk($product['name']); echo "<br>";?> 
+                  <div class="categories-tag"><?php echo "", remove_junk($product['categorie']); ?></div>
+                </div>
+                <!-- <td class="text-center" style="font-size:18px;"> <?php echo remove_junk($product['categorie']); ?></td> -->
+                <td class="text-center table-list" style="font-size:18px; "> <?php echo remove_junk($product['quantity']); ?></td>
+                <td class="text-center table-list" style="font-size:18px; "> <?php echo remove_junk($product['buy_price']); ?></td>
+                <td class="text-center table-list" style="font-size:18px; "> <?php echo remove_junk($product['sale_price']); ?></td>
+                <td class="text-center " style="font-size:18px;"> <?php echo read_date($product['date']); ?></td>
+                <td class="text-center " style="font-size:18px;">
                   <div class="btn-group">
-                    <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
+                    <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-s"  title="Edit" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-edit"></span>
                     </a>
-                    <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
+                    <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-s"  title="Delete" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-trash"></span>
                     </a>
                   </div>
@@ -77,3 +74,14 @@
     </div>
   </div>
   <?php include_once('layouts/footer.php'); ?>
+  
+  <script>
+  $(document).ready(function() {
+    $("#search").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("tbody tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
