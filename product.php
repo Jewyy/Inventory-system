@@ -18,7 +18,7 @@ $products = join_product_table();
   <div class="col-md-12">
     <div style="background-color: white;">
 
-      <table class=product-table">
+      <table class="product-table">
         <thead>
           <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
             <th class="product-tab" style="width: 30px;">No.</th>
