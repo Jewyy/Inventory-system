@@ -6,6 +6,8 @@
 ?>
 <?php
  if(isset($_POST['add_product'])){
+   $photo = new Media();
+   $photo->upload($_FILES['file_upload']);
    $req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );
    validate_fields($req_fields);
    if(empty($errors)){
@@ -14,11 +16,7 @@
      $p_qty   = remove_junk($db->escape($_POST['product-quantity']));
      $p_buy   = remove_junk($db->escape($_POST['buying-price']));
      $p_sale  = remove_junk($db->escape($_POST['saleing-price']));
-     if (is_null($_POST['product-photo']) || $_POST['product-photo'] === "") {
-       $media_id = '0';
-     } else {
-       $media_id = remove_junk($db->escape($_POST['product-photo']));
-     }
+
      $date    = make_date();
      $query  = "INSERT INTO products (";
      $query .=" name,quantity,buy_price,sale_price,categorie_id,media_id,date";
@@ -79,15 +77,6 @@
                     <?php endforeach; ?>
                     </select>
                   </div>
-                  <div class="col-md-6">
-                    <select class="form-control" name="product-photo">
-                      <option value="">Select Product Photo</option>
-                    <?php  foreach ($all_photo as $photo): ?>
-                      <option value="<?php echo (int)$photo['id'] ?>">
-                        <?php echo $photo['file_name'] ?></option>
-                    <?php endforeach; ?>
-                    </select>
-                  </div>
                 </div>
               </div>
 
@@ -121,6 +110,11 @@
                   </div>
                </div>
               </div>
+              <img id="preview" src="" alt="Preview" style="max-width: 200px; max-height: 200px;">
+              
+              <span class="input-group-btn">
+                <input type="file" name="file_upload" multiple="multiple" class="btn btn-primary btn-file" onchange="previewFile()"/>
+              </span>
               <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
           </form>
          </div>
@@ -130,3 +124,18 @@
   </div>
 
 <?php include_once('layouts/footer.php'); ?>
+<script>
+function previewFile() {
+  var preview = document.getElementById('preview');
+  var file    = document.querySelector('input[name="file_upload"]').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+</script>
