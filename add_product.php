@@ -126,15 +126,6 @@ if (isset($_POST['add_product'])) {
               </div>
             </div>
             <div class="form-group">
-              <p class="topic"><b>Product Details</b></p>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-th-large"></i>
-                </span>
-                <input type="text" class="form-control" name="product-title" placeholder="Enter Product Details">
-              </div>
-            </div>
-            <div class="form-group">
               <!-- <div class="row"> -->
               <!-- <div class="col-md-6"> -->
               <p class="topic"><b>Product Category</b></p>
