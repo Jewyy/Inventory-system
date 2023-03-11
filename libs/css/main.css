@@ -114,7 +114,6 @@ line-height:65px;
 font-size: 40px;
 color: #fff;
 }
-
 #header {
 position: fixed;
 z-index: 99;
@@ -220,7 +219,6 @@ border-bottom: 0;
 }.datepicker{
 text-align: center;
 }
-
 .sidebar {
   position: fixed;
   z-index: 10;
@@ -259,10 +257,7 @@ padding: 0;
   white-space: nowrap;
   text-decoration: none;
   text-align: left;
-}
-
-.sidebar ul li a span,
-.sidebar ul li i {
+}.sidebar ul li a span,.sidebar ul li i{
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1.5px;
@@ -394,20 +389,6 @@ background-color: #fcfcfc;
 border: 1px solid #dbdbdb;
 border-radius: 0;
 }
-
-input[type=file] {
-  text-indent: 0px;
-}
-
-td img.img-thumbnail {
-  width: 125px;
-  height: 125px;
-  vertical-align: top;
-}
-
-.img-avatar {
-  width: 50px;
-  height: 50px;
 input[type=file]{
 text-indent: -99999px;
 }td img.img-thumbnail{
