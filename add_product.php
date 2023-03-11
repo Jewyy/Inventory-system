@@ -6,6 +6,13 @@ $all_photo = find_all('media');
 ?>
 <?php
 if (isset($_POST['add_product'])) {
+  $photo = new Media();
+  $photo->upload($_FILES['file_upload']);
+  if($photo->process_media()){
+    $session->msg('s','photo has been uploaded.');
+} else{
+  $session->msg('d',join($photo->errors));
+}
   $req_fields = array('product-title', 'product-categorie', 'product-quantity', 'buying-price', 'saleing-price');
   validate_fields($req_fields);
   if (empty($errors)) {
@@ -79,13 +86,15 @@ if (isset($_POST['add_product'])) {
     color: #8594A6;
   }
 
-  .button{
+  .button {
     text-align: center;
   }
-  .input-group{
+
+  .input-group {
     display: block;
   }
-  .input-group-addon{
+
+  .input-group-addon {
     display: none;
   }
 </style>
@@ -106,7 +115,7 @@ if (isset($_POST['add_product'])) {
       </div>
       <div class="panel-body">
         <div class="col-md-12">
-          <form method="post" action="add_product.php" class="clearfix">
+          <form method="post" action="add_product.php" class="clearfix" enctype="multipart/form-data">
             <div class="form-group">
               <p class="topic"><b>Product Name</b></p>
               <div class="input-group">
@@ -114,15 +123,6 @@ if (isset($_POST['add_product'])) {
                   <i class="glyphicon glyphicon-th-large"></i>
                 </span>
                 <input type="text" class="form-control" name="product-title" placeholder="Enter Product Name">
-              </div>
-            </div>
-            <div class="form-group">
-              <p class="topic"><b>Product Details</b></p>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-th-large"></i>
-                </span>
-                <input type="text" class="form-control" name="product-title" placeholder="Enter Product Details">
               </div>
             </div>
             <div class="form-group">
@@ -139,13 +139,14 @@ if (isset($_POST['add_product'])) {
             </div>
             <!-- </div> -->
             <div class="form-group">
-              <!-- <div class="col-md-6"> -->
-              <p class="topic"><b>Product Photo</b></p>
-              <div>
+              <p class="topic"><b>Product Image</b></p>
+              <div class="input-group">
                 <div id="img-preview"></div>
-                <input type="file" accept="image/*" id="choose-file" name="choose-file" />
-                <label for="choose-file">Select Photo</label>
+                <input type="file" name="file_upload" multiple="multiple" accept="image/*" id="file">
+                <label for="file">Choose a file</label>
               </div>
+            </div>
+              
               <!-- <select class="form-control" name="product-photo">
                 <option value="">Select Product Photo</option>
                 <?php foreach ($all_photo as $photo) : ?>
@@ -193,7 +194,7 @@ if (isset($_POST['add_product'])) {
               </div>
             </div>
             <div class="button">
-              <button type="submit" name="add_product" class="btn btn-danger">Cancel</button>
+              <a href="product.php" class="btn btn-default btn-danger">Cancel</a>
               <button type="submit" name="add_product" class="btn btn-success">Add</button>
             </div>
           </form>
@@ -204,7 +205,7 @@ if (isset($_POST['add_product'])) {
 </div>
 
 <script>
-  const chooseFile = document.getElementById("choose-file");
+  const chooseFile = document.getElementById("file");
   const imgPreview = document.getElementById("img-preview");
 
   chooseFile.addEventListener("change", function() {
