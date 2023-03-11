@@ -142,7 +142,6 @@ if (isset($_POST['add_product'])) {
               <p class="topic"><b>Product Image</b></p>
               <div class="input-group">
                 <div id="img-preview"></div>
-                <input type="hidden" name="media_id" value="<?php echo $photo->id ?>">
                 <input type="file" name="file_upload" multiple="multiple" accept="image/*" id="file">
                 <label for="file">Choose a file</label>
               </div>
