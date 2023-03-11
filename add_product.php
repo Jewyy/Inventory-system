@@ -78,6 +78,16 @@ if (isset($_POST['add_product'])) {
     background-color: #dbdbdb;
     color: #8594A6;
   }
+
+  .button{
+    text-align: center;
+  }
+  .input-group{
+    display: block;
+  }
+  .input-group-addon{
+    display: none;
+  }
 </style>
 
 <div class="row">
@@ -182,7 +192,7 @@ if (isset($_POST['add_product'])) {
                 </div>
               </div>
             </div>
-            <div class="button" style="border: 1px solid black; text-align: center">
+            <div class="button">
               <button type="submit" name="add_product" class="btn btn-danger">Cancel</button>
               <button type="submit" name="add_product" class="btn btn-success">Add</button>
             </div>
