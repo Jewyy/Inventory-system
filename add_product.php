@@ -8,11 +8,11 @@ $all_photo = find_all('media');
 if (isset($_POST['add_product'])) {
   $photo = new Media();
   $photo->upload($_FILES['file_upload']);
-  if($photo->process_media()){
-    $session->msg('s','photo has been uploaded.');
-} else{
-  $session->msg('d',join($photo->errors));
-}
+  if ($photo->process_media()) {
+    $session->msg('s', 'photo has been uploaded.');
+  } else {
+    $session->msg('d', join($photo->errors));
+  }
   $req_fields = array('product-title', 'product-categorie', 'product-quantity', 'buying-price', 'saleing-price');
   validate_fields($req_fields);
   if (empty($errors)) {
@@ -140,20 +140,21 @@ if (isset($_POST['add_product'])) {
             <!-- </div> -->
             <div class="form-group">
               <p class="topic"><b>Product Image</b></p>
-              <div class="input-group">
+              <!-- <div class="input-group">
                 <div id="img-preview"></div>
+
                 <input type="file" name="file_upload" multiple="multiple" accept="image/*" id="file">
                 <label for="file">Choose a file</label>
-              </div>
-            </div>
-              
-              <!-- <select class="form-control" name="product-photo">
+              </div> -->
+              <!-- </div> -->
+
+              <select class="form-control" name="product-photo">
                 <option value="">Select Product Photo</option>
                 <?php foreach ($all_photo as $photo) : ?>
                   <option value="<?php echo (int)$photo['id'] ?>">
                     <?php echo $photo['file_name'] ?></option>
                 <?php endforeach; ?>
-              </select> -->
+              </select>
               <!-- </div> -->
               <!-- </div> -->
             </div>
