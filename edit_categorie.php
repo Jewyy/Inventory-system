@@ -52,7 +52,7 @@ if(isset($_POST['edit_cat'])){
               </div>
            <div class="group-btn">
               <a href="categorie.php" class="btn btn-default btn-danger">Cancel</a>
-              <button type="submit" name="edit_cat" class="btn btn-success" style="">Update categorie</button>
+              <button type="submit" name="edit_cat" class="btn btn-success">Update categorie</button>
            </div>
        </form>
        </div>
