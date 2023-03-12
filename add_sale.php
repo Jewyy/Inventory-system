@@ -37,10 +37,14 @@ if(isset($_POST['add_sale'])){
     <?php echo display_msg($msg); ?>
   </div>
 </div>
+<div class="box-header">
+        <div class="headertext">Add Sales</div>
+    </div>
 <div class="row">
   <div class="col-md-12">
     <div class="panel">
-      <div class="panel-heading clearfix">
+      <!-- <div class="panel-heading clearfix"style="background-color: green;">
+      
         <strong>
           <span class="glyphicon glyphicon-th"></span>
           <span>Add Sale</span>
@@ -48,10 +52,10 @@ if(isset($_POST['add_sale'])){
        <div class="pull-right">
          <a href="sales.php" class="btn btn-primary">Show all sales</a>
        </div>
-      </div>
-      <div class="panel-body">
-        <form method="post" action="add_sale.php">
-          <div class="form-group">
+      </div> -->
+      <div>
+        <form method="post" action="add_sale.php" class="inner-width">
+          <div class="form-groupInput">
             <label for="product_id">Product:</label>
             <select class="form-control" id="product_id" name="product_id">
               <?php
@@ -63,19 +67,25 @@ if(isset($_POST['add_sale'])){
               <?php endforeach; ?>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-groupInput">
             <label for="quantity">Quantity:</label>
             <input type="text" class="form-control" id="quantity" name="quantity">
           </div>
-          <div class="form-group">
+          <div class="form-groupInput">
             <label for="total">Total:</label>
             <input type="text" class="form-control" id="total" name="total">
           </div>
-          <div class="form-group">
+          <div class="form-groupInput">
             <label for="date">Date:</label>
             <input type="date" class="form-control datepicker" id="date" name="date" data-date-format="">
           </div>
-          <button type="submit" name="add_sale" class="btn btn-primary">Add Sale</button>
+          
+          <div class="group-btn" style="padding-top: 16px;">
+            <form method="post"> <input type="hidden" name="confirm" value="yes">
+                <a href="sales.php" class="btn btn-default">Cancel</a>
+                <button type="submit" name="add_sale" class="btn btn-primary">Add Sale</button>
+            </form>
+        </div>
         </form>
       </div>
     </div>
