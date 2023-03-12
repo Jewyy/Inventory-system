@@ -44,7 +44,7 @@
             <div class="form-group" style="width:100%;">
                 <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-success"><img src="./asset/plus.svg">Add Category</button>
+            <button type="submit" name="add_cat" class="btn btn-success"><img src="./asset/plus.svg"> Add Category</button>
         </form>
         </div>
       </div>

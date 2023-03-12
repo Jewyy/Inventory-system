@@ -37,17 +37,21 @@ if(isset($_POST['edit_cat'])){
      <?php echo display_msg($msg); ?>
    </div>
      <div class="panel">
-       <div class="text-center">
-         <strong>
-           <span style="font-size:22pt;">Editing <?php echo remove_junk(ucfirst($categorie['name']));?></span>
-        </strong>
+       <div class="headertext">
+           Editing <?php echo remove_junk(ucfirst($categorie['name']));?>
        </div>
-       <div class="panel-body">
-         <form method="post" action="edit_categorie.php?id=<?php echo (int)$categorie['id'];?>">
-           <div class="category-form">
-              <input type="text" class="category-input-form" name="categorie-name" value="<?php echo remove_junk(ucfirst($categorie['name']));?>">
-           </div>
+       <div class="panel-body" >
+         <form method="post" action="edit_categorie.php?id=<?php echo (int)$categorie['id'];?>" >
+           <div class="row" style="align-items:center;">
+              <div class="form-group" >
+                <div class="category-form">
+                      <p class="topic"><b>Category Name</b></p>
+                      <input type="text" class="form-control" name="categorie-name" style="margin-bottom:12px;" value="<?php echo remove_junk(ucfirst($categorie['name']));?>">
+                  </div>
+                </div>
+              </div>
            <div class="group-btn">
+              <a href="categorie.php" class="btn btn-default btn-danger">Cancel</a>
               <button type="submit" name="edit_cat" class="btn btn-success" style="">Update categorie</button>
            </div>
        </form>
