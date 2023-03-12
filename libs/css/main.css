@@ -473,4 +473,18 @@ gap: 32px;
 .display-font-table{
   color: #434486;
   font-weight:bold ;
+}.category-form{
+  text-align: center;
+  margin-bottom:12px;
+
+}.category-input-form{
+  color: #646464;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -moz-transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
 }
