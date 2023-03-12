@@ -58,9 +58,15 @@ if (isset($_POST['add_product'])) {
   }
 
   #img-preview img {
-    width: 100%;
+    width: 10%;
     height: auto;
     display: block;
+  }
+
+  #preview-image {
+    max-width: 200px;
+    /* height: auto; */
+    max-height: 200px;
   }
 
   [type="file"] {
@@ -140,23 +146,19 @@ if (isset($_POST['add_product'])) {
             <!-- </div> -->
             <div class="form-group">
               <p class="topic"><b>Product Image</b></p>
-              <!-- <div class="input-group">
-                <div id="img-preview"></div>
-
-                <input type="file" name="file_upload" multiple="multiple" accept="image/*" id="file">
-                <label for="file">Choose a file</label>
-              </div> -->
-              <!-- </div> -->
-
-              <select class="form-control" name="product-photo">
+              <div class="input-group">
+                <!-- <div id="img-preview"></div> -->
+                <img id="preview-image" src="" alt="Preview Image">
+              </div>
+            </div>
+            <div>
+              <select class="form-control" name="product-photo" onchange="handleSelectChange(event)">
                 <option value="">Select Product Photo</option>
                 <?php foreach ($all_photo as $photo) : ?>
                   <option value="<?php echo (int)$photo['id'] ?>">
                     <?php echo $photo['file_name'] ?></option>
                 <?php endforeach; ?>
               </select>
-              <!-- </div> -->
-              <!-- </div> -->
             </div>
 
             <div class="form-group">
@@ -206,23 +208,20 @@ if (isset($_POST['add_product'])) {
 </div>
 
 <script>
-  const chooseFile = document.getElementById("file");
-  const imgPreview = document.getElementById("img-preview");
+  function handleSelectChange(event) {
+    var selectedOption = event.target.options[event.target.selectedIndex];
+    var fileName = selectedOption.text;
 
-  chooseFile.addEventListener("change", function() {
-    getImgData();
-  });
+    var fileURL = "uploads/products/" + fileName; // modify this to the actual path of your image directory
 
-  function getImgData() {
-    const files = chooseFile.files[0];
-    if (files) {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(files);
-      fileReader.addEventListener("load", function() {
-        imgPreview.style.display = "block";
-        imgPreview.innerHTML = '<img src="' + this.result + '" />';
-      });
-    }
+    // display the selected image in the img element
+    document.getElementById('preview-image').src = fileURL;
+
+    // display the selected image in the div element
+    document.getElementById('img-preview').style.backgroundImage = 'url(' + fileURL + ')';
+
+    // update the selected option text
+    document.getElementById('selected-option').textContent = fileName;
   }
 </script>
 
