@@ -34,8 +34,9 @@ if (isset($_POST['submit'])) {
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-btn">
-                  <input type="file" name="file_upload" multiple="multiple" class="btn btn-primary btn-file" />
+                  <input type="file" name="file_upload" id="file_upload" multiple="multiple" class="btn btn-primary btn-file" />
                 </span>
+                <div id="preview"></div>
                 <button type="submit" name="submit" class="btn btn-default">Upload</button>
               </div>
             </div>
@@ -81,3 +82,18 @@ if (isset($_POST['submit'])) {
 
 
 <?php include_once('layouts/footer.php'); ?>
+<script>
+  function imagePreview(fileInput) {
+    if (fileInput.files && fileInput.files[0]) {
+        var fileReader = new FileReader();
+        fileReader.onload = function (event) {
+            $('#preview').html('<img src="'+event.target.result+'" width="300" height="auto"/>');
+        };
+        fileReader.readAsDataURL(fileInput.files[0]);
+    }
+}
+
+$("#file_upload").change(function () {
+    imagePreview(this);
+});
+</script>
