@@ -47,6 +47,64 @@ if (isset($_POST['product'])) {
 
 ?>
 <?php include_once('layouts/header.php'); ?>
+
+<style>
+  #img-preview {
+    display: none;
+    width: 155px;
+    /* border: 2px solid #333; */
+    margin-bottom: 20px;
+  }
+
+  #img-preview img {
+    width: 10%;
+    height: auto;
+    display: block;
+  }
+
+  #preview-image {
+    max-width: 200px;
+    /* height: auto; */
+    max-height: 200px;
+  }
+
+  [type="file"] {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  [type="file"]+label {
+    font-family: sans-serif;
+    padding: 10px 30px;
+    /* border: 2px solid #f44336; */
+    border-radius: 3px;
+    border: 1px solid #8594A6;
+    background-color: #fff;
+    color: #8594A6;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  [type="file"]+label:hover {
+    background-color: #dbdbdb;
+    color: #8594A6;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .input-group {
+    display: block;
+  }
+
+  .input-group-addon {
+    display: none;
+  }
+</style>
+
+
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
@@ -65,17 +123,10 @@ if (isset($_POST['product'])) {
         <div class="col-md-12">
           <form method="post" action="edit_product.php?id=<?php echo (int)$product['id'] ?>">
             <div class="form-group">
-              <!-- <div class="input-group"> -->
-              <!-- <span class="input-group-addon">
-                   <i class="glyphicon glyphicon-th-large"></i>
-                  </span> -->
               <p class="topic"><b>Product Name</b></p>
               <input type="text" class="form-control" name="product-title" value="<?php echo remove_junk($product['name']); ?>">
-              <!-- </div> -->
             </div>
             <div class="form-group">
-              <!-- <div class="row"> -->
-              <!-- <div class="col-md-6"> -->
               <p class="topic"><b>Product Category</b></p>
               <select class="form-control" name="product-categorie">
                 <option value=""> Select a categorie</option>
@@ -86,59 +137,37 @@ if (isset($_POST['product'])) {
                 <?php endforeach; ?>
               </select>
             </div>
-            <!-- </div> -->
             <div class="form-group">
-              <!-- <div class="col-md-6"> -->
               <p class="topic"><b>Product Image</b></p>
-              <select class="form-control" name="product-photo">
-                <option value=""> No image</option>
+              <div class="input-group">
+                <img id="preview-image" src="" alt="Preview Image">
+              </div>
+            </div>
+            <div>
+              <select class="form-control" name="product-photo" onchange="handleSelectChange(event)">
+                <option value="">Select Product Photo</option>
                 <?php foreach ($all_photo as $photo) : ?>
-                  <option value="<?php echo (int)$photo['id']; ?>" <?php if ($product['media_id'] === $photo['id']) : echo "selected";
-                                                                    endif; ?>>
+                  <option value="<?php echo (int)$photo['id'] ?>">
                     <?php echo $photo['file_name'] ?></option>
                 <?php endforeach; ?>
               </select>
             </div>
-            <!-- </div> -->
-
-            <!-- <div class="form-group"> -->
-            <!-- <div class="row"> -->
-            <!-- <div class="col-md-4"> -->
             <div class="form-group">
               <label for="qty">Product Quantity</label>
-              <!-- <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-shopping-cart"></i>
-                </span> -->
               <input type="number" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
-              <!-- </div> -->
             </div>
-            <!-- </div> -->
             <div class="form-group">
               <div class="row">
                 <div class="col-md-6">
                   <label for="qty">Buying price</label>
-                  <!-- <div class="input-group"> -->
-                  <!-- <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-usd"></i>
-                    </span> -->
                   <input type="number" class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']); ?>">
-                  <!-- <span class="input-group-addon">.00</span> -->
-                  <!-- </div> -->
                 </div>
                 <div class="col-md-6">
                   <label for="qty">Selling price</label>
-                  <!-- <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-usd"></i>
-                    </span> -->
                   <input type="number" class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']); ?>">
-                  <!-- <span class="input-group-addon">.00</span> -->
-                  <!-- </div> -->
                 </div>
               </div>
             </div>
-            <!-- </div> -->
             <div class="button">
               <a href="product.php" class="btn btn-default btn-danger">Cancel</a>
               <button type="submit" name="product" class="btn btn-success">Update</button>
@@ -149,5 +178,25 @@ if (isset($_POST['product'])) {
     </div>
   </div>
 </div>
+
+
+<script>
+  function handleSelectChange(event) {
+    var selectedOption = event.target.options[event.target.selectedIndex];
+    var fileName = selectedOption.text;
+
+    var fileURL = "uploads/products/" + fileName; // modify this to the actual path of your image directory
+
+    // display the selected image in the img element
+    document.getElementById('preview-image').src = fileURL;
+
+    // display the selected image in the div element
+    document.getElementById('img-preview').style.backgroundImage = 'url(' + fileURL + ')';
+
+    // update the selected option text
+    document.getElementById('selected-option').textContent = fileName;
+  }
+</script>
+
 
 <?php include_once('layouts/footer.php'); ?>
