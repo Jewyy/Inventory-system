@@ -506,4 +506,8 @@ flex-direction: column;
 .display-font-table{
 color: #434486;
 font-weight:bold ;
+}.category-form{
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom:12px;
 }
