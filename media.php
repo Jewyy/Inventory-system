@@ -25,37 +25,36 @@ if (isset($_POST['submit'])) {
   </div>
 
   <div class="col-md-12">
-    <div class="panel panel-default">
       <div class="col-md-4">
-        <h2>Media</h2>
-        <form class="form-inline" style="width: 150px;" action="media.php" method="POST" enctype="multipart/form-data">
-
+      <div class="headertext">Media</div>
+        <form class="form-inline" style="width: 200px;" action="media.php" method="POST" enctype="multipart/form-data">
           <div class="wrapper">
             <div class="preview-box">
-              <div class="cancel-icon"><i class="fas fa-times"></i></div>
-              <div class="img-preview" id="preview"></div>>
-              <div class="img-icon"><i class="far fa-image"></i></div>
-              <div class="text">Please upload image, <br />to see a preview</div>
+              <div class="img-preview" id="preview"></div>
+              <div class="text">Please choose image, <br />to see a preview</div>
             </div>
           </div>
-          <div style="flex-direction: row; display: flex; justify-content: space-around;">
-            <input type="file" name="file_upload" id="file_upload" multiple="multiple" class="btn btn-primary btn-file" value="Choose" style="width: 80px;" />
-            <button type="submit" name="submit" class="btn btn-default" style="width: 80px;">Upload</button>
+          <div style="flex-direction: row; display: flex; padding-left: 15px;">
+            <label for="file_upload" class="btn btn-default">
+              Choose a file
+              <input type="file" name="file_upload" id="file_upload" multiple="multiple" style="display: none;">
+            </label>
+            <div style="padding-left: 40px;">
+              <button type="submit" name="submit" class="btn btn-default" style="width: 80px;">Upload</button>
+            </div>
           </div>
-
-
         </form>
       </div>
       <div class="col-md-7">
-        <div class="panel-body">
-          <table class="table">
+        <div>
+          <table class="profuct-table" style="width:auto">
             <thead>
-              <tr>
-                <th class="text-center" style="width: 50px;">No.</th>
-                <th class="text-center">Photo</th>
-                <th class="text-center">Photo Name</th>
-                <th class="text-center" style="width: 20%;">Photo Type</th>
-                <th class="text-center" style="width: 50px;">Actions</th>
+              <tr style="height:60px; text-align: center; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
+                <th class="product-tab" style="width: 10%; text-align: center;">No.</th>
+                <th class="product-tab" style="width: 30%; text-align: center;">Photo</th>
+                <th class="product-tab" style="width: 35%; text-align: center;">Photo Name</th>
+                <th class="product-tab" style="width: 20%; text-align: center;">Photo Type</th>
+                <th class="product-tab" style="width: 25%; text-align: center;">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -79,10 +78,9 @@ if (isset($_POST['submit'])) {
                 </tr>
               <?php endforeach; ?>
             </tbody>
-            </tabel>
+          </tabel>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
@@ -104,10 +102,6 @@ if (isset($_POST['submit'])) {
   });
 </script>
 <style>
-  /* .form-inline{
-    width: 30%;
-    height: 100px;
-  } */
   .wrapper {
     height: 170px;
     width: 300px;
@@ -127,29 +121,6 @@ if (isset($_POST['submit'])) {
     justify-content: center;
     border-radius: 5px;
     border: 2px dashed #c2cdda;
-  }
-
-  .preview-box.imgActive {
-    border: 2px solid transparent;
-  }
-
-  .preview-box .cancel-icon {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    z-index: 999;
-    color: #4158d0;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-  }
-
-  .preview-box.imgActive:hover .cancel-icon {
-    display: block;
-  }
-
-  .preview-box .cancel-icon:hover {
-    color: #ff0000;
   }
 
   .preview-box .img-preview {
@@ -198,43 +169,5 @@ if (isset($_POST['submit'])) {
     border-radius: 5px;
     border: 2px solid lightgrey;
     transition: all 0.3s ease;
-  }
-
-  .input-data #field.disabled {
-    color: #b3b3b3;
-    pointer-events: none;
-  }
-
-  .wrapper .input-data #field:focus {
-    border-color: #4158d0;
-  }
-
-  .input-data #field::placeholder {
-    color: #b3b3b3;
-  }
-
-  .wrapper .input-data #button {
-    height: 50px;
-    width: 100%;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 0.5;
-    pointer-events: none;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
-    transition: all 0.3s ease;
-  }
-
-  .input-data #button.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .input-data #button:active {
-    transform: scale(0.99);
   }
 </style>
