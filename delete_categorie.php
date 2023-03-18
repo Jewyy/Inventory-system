@@ -19,7 +19,9 @@
 <?php include_once 'layouts/header.php'; ?>
 <div class="content">
   <div class="box-header">
-    <div class="headertext">Delete categorie</div>
+    <strong>
+      <div class="panel-heading" style="font-size:22pt;">Delete categorie</div>
+    </strong>
 </div>
     <div class="max-width">
       <div class="content-text">Are you sure you want to delete “<?php echo remove_junk(ucfirst($categorie['name'])); ?>?”</div>

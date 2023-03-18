@@ -37,8 +37,10 @@ if(isset($_POST['edit_cat'])){
      <?php echo display_msg($msg); ?>
    </div>
      <div class="panel">
-       <div class="headertext">
+       <div class="panel-heading" style="font-size:22pt;">
+        <strong>
            Editing <?php echo remove_junk(ucfirst($categorie['name']));?>
+        </strong>
        </div>
        <div class="panel-body" >
          <form method="post" action="edit_categorie.php?id=<?php echo (int)$categorie['id'];?>" >
