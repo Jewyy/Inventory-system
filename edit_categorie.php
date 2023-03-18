@@ -60,8 +60,4 @@ if(isset($_POST['edit_cat'])){
        </div>
      </div>
 
-
-
-
-
 <?php include_once('layouts/footer.php'); ?>

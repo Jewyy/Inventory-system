@@ -32,29 +32,15 @@
      </div>
   </div>
    <div class="row">
-    <div class="col-md-5">
-      <div class="panel-header">
-        <div class="panel-heading">
-          <strong>
-            <span style="font-size:22pt;">Add New Category</span>
-         </strong>
-        </div>
-        <div class="panel-body" style="padding-top:22px">
-          <form method="post" action="categorie.php">
-            <div class="form-group" style="width:100%;">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
-            </div>
-            <button type="submit" name="add_cat" class="btn btn-success"><img src="./asset/plus.svg"> Add Category</button>
-        </form>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-7">
+    <div class="col">
     <div class="panel-header">
       <div class="panel-heading">
         <strong>
           <span style="font-size:22pt;">All Categories</span>
        </strong>
+      </div>
+      <div class="pull-right">
+        <a href="add_categorie.php" class="btn btn-success"> <img src="./asset/plus.svg">Add Category</a>
       </div>
         <div class="panel-body">
           <table class="table">
