@@ -31,7 +31,7 @@
     </a>
   </li>
   <li>
-    <a href="category.php">
+    <a href="categorie.php">
       
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <g clip-path="url(#clip0_220_1208)">
@@ -47,7 +47,7 @@
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="product.php">
       <span>Products</span>
          <li>
             <a href="product.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
