@@ -20,7 +20,7 @@
 <div class="content">
   <div class="box-header">
     <strong>
-      <div class="panel-heading" style="font-size:22pt;">Delete categorie</div>
+      <div class="panel-heading" style="font-size:22pt;">Delete category</div>
     </strong>
 </div>
     <div class="max-width">
