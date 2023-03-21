@@ -41,7 +41,7 @@ if (isset($_POST['update_sale'])) {
     } else {
         $session->msg('d', $errors);
         //  redirect('edit_sale.php?id='.(int)$sale['id'],false);
-        redirect('add_sale.php', false);
+        redirect('edit_sale.php', false);
     }
 }
 
@@ -115,8 +115,7 @@ if (isset($_POST['update_sale'])) {
                                 <div class="form-groupInput">
                                     <label for="quantity">Date:</label>
                                     <td id="s_date">
-                                        <input type="date" class="form-control datepicker" name="date"
-                                            data-date-format="" value="<?php echo remove_junk($sale['date']); ?>">
+                                            <input type="date" class="form-control" name="date" data-date-format="yyyy-mm-dd" value="<?php echo date('Y-m-d', strtotime($sale['date'])); ?>">
                                     </td>
                                 </div>
                                 <!-- <td>

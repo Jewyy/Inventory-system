@@ -19,7 +19,9 @@
   <body>
   <?php  if (true): ?>
     <header id="header">
-      <div class="logo pull-left"> Inventory System</div>
+      <div class="logo pull-left"> 
+      <img src="asset/logo.svg" alt="logo-image" style="padding-left:22px;">
+      </div>
       <div class="header-content">
 
       <div class="pull-right clearfix">
