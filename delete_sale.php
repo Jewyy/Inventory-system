@@ -4,8 +4,8 @@ require_once('includes/load.php');
 // Checkin What level user has permission to view this page
 // page_require_level(3);
 
-$sale = find_all_sale();
 $sale = find_by_id('sales', (int) $_GET['id']);
+$product_name = find_product_name_by_sale_id($sale['id']);
 
 if (!$sale) {
   $session->msg("d", "Missing sale id.");
@@ -36,7 +36,7 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-trash"></span>
-          <span>Are you sure you want to delete <?php echo remove_junk($sale['name']); ?>?</span>
+          <span>Are you sure you want to delete <?php echo remove_junk($product_name); ?>?</span>
           <!-- <?php foreach ($sale as $sale): ?>
              
           <?php endforeach; ?> -->
