@@ -16,7 +16,7 @@ if (!$sale) {
 if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
   $delete_id = delete_by_id('sales', (int)$sale['id']);
   if ($delete_id) {
-    $session->msg("s", "Sale ".$sale['name']." deleted.");
+    $session->msg("s", "Sale " . $sale['name'] . " deleted.");
     redirect('sales.php');
   } else {
     $session->msg("d", "Sale deletion failed.");
@@ -27,6 +27,11 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
 
 
 <?php include_once('layouts/header.php'); ?>
+<style>
+  .lightgray  {
+    color: #909090;
+  }
+</style>
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
@@ -36,8 +41,8 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-trash"></span>
-          <span>Are you sure you want to delete <?php echo remove_junk($product_name); ?>?</span>
-          <!-- <?php foreach ($sale as $sale): ?>
+          <span class="lightgray">Are you sure you want to delete </span> "<?php echo remove_junk($product_name); ?>" ?
+          <!-- <?php foreach ($sale as $sale) : ?>
              
           <?php endforeach; ?> -->
         </strong>
