@@ -1,6 +1,7 @@
 <?php
   $page_title = 'Sales Borad';
   require_once('includes/load.php');
+  include_once('layouts/header.php'); 
   // Checkin What level user has permission to view this page
   //  page_require_level(3);
 ?>
@@ -51,14 +52,12 @@
     justify-content: center;
   }
   .tab {
-    /* display: inline-block; */
     cursor: pointer;
     text-align: center;
     margin: 10px 0;
     border: 1px solid #8594A6;
     width: 100%;
     height: 35px;
-    /* border-radius: 5px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,14 +66,12 @@
     display: flex;
     margin-top: 20px;
   }
-    
-    /* Style for the active tab */
+
   .active {
     background-color: var(--Green);
     color: white;
   }
-  
-  /* Style for the content */
+
   .content {
     display: none;
   }
