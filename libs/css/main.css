@@ -256,8 +256,8 @@ white-space: nowrap;
 text-decoration: none;
 text-align: left;
 }.sidebar ul li a span,.sidebar ul li i{
-font-size: 14px;
-font-weight: 300;
+/* font-size: 14px;
+font-weight: 300; */
 letter-spacing: 1.5px;
 /* text-shadow: 0 1px rgba(0,0,0, 1); */
 }.sidebar ul li a i{
