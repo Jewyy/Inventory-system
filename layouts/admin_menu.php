@@ -46,9 +46,10 @@
       <span>&nbsp;Categories</span>
     </a>
   </li>
-  <li>
-    <a href="product.php">
-      <span>Products</span>
+  <div class="sidebar-topic">
+    <span>Products</span>
+  </div>
+    <a>
          <li>
             <a href="product.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <g clip-path="url(#clip0_220_1208)">
@@ -86,10 +87,9 @@
              </svg>&nbsp;Media</a> 
           </li>
     </a>
-  </li>
-  <li>
-    <a href="#">
-      <span>Sales</span>
+    <div class="sidebar-topic">
+    <span>Sales</span>
+    </div>
       <li>
             <a href="sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <g clip-path="url(#clip0_220_1208)">
@@ -114,49 +114,8 @@
                 </defs>
              </svg>&nbsp;Add Sales</a> 
           </li>
-    </a>
-  </li>
-  <li>
-    <!-- <a href="#"> 
-     <span>Sales Report</span>
-      <li >
-            <a href="sales_report.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <g clip-path="url(#clip0_220_1208)">
-                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_220_1208">
-                <rect width="16" height="16" fill="white"/>
-                </clipPath>
-                </defs>
-             </svg>&nbsp;Sales by date</a> 
-          </li>
           <li>
-            <a href="monthly_sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <g clip-path="url(#clip0_220_1208)">
-                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_220_1208">
-                <rect width="16" height="16" fill="white"/>
-                </clipPath>
-                </defs>
-             </svg>&nbsp;Monthly sales</a> 
-          </li>
-          <li>
-            <a href="daily_sales.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <g clip-path="url(#clip0_220_1208)">
-                <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_220_1208">
-                <rect width="16" height="16" fill="white"/>
-                </clipPath>
-                </defs>
-             </svg>&nbsp;Daily sales</a> 
-          </li> -->
-          
-            <a href="sales_board.php">    <!--จิวแก้ link ตรงนี้-->
+            <a href="sales_board.php"> 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <g clip-path="url(#clip0_220_1208)">
                 <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
@@ -166,16 +125,11 @@
                 <rect width="16" height="16" fill="white"/>
                 </clipPath>
                 </defs>
-              </svg>
-              <span>&nbsp;Sales Board</span>
-            </a>      
-
-                
-    <!-- </a> -->
-  </li>
-  <li>
-  <a href="sales_report.php">    <!--จิวแก้ link ตรงนี้-->
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              </svg>&nbsp;Sales Board</a>     
+          </li>
+          <li>
+            <a href="sales_report.php">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <g clip-path="url(#clip0_220_1208)">
                 <path d="M7.99992 14.6667C11.6818 14.6667 14.6666 11.6819 14.6666 8.00004C14.6666 4.31814 11.6818 1.33337 7.99992 1.33337C4.31802 1.33337 1.33325 4.31814 1.33325 8.00004C1.33325 11.6819 4.31802 14.6667 7.99992 14.6667Z" stroke="#D6D6D6" stroke-width="2"/>
                 </g>
@@ -184,8 +138,6 @@
                 <rect width="16" height="16" fill="white"/>
                 </clipPath>
                 </defs>
-              </svg>
-              <span>&nbsp;Sales Report</span>
-            </a>  
-  </li>
+              </svg>&nbsp;Sales Report</a>  
+          </li>
 </ul>

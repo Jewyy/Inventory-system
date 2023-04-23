@@ -241,6 +241,11 @@ padding-top: 7px;
 padding-bottom: 7px;
 padding-left: 22px;
 /* justify-content: center; */
+}.sidebar-topic{
+  text-align: left;
+  padding-left: 22px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }.sidebar ul li:hover,ul.submenu{
 background-color:#EDEEEF;
 }.sidebar ul li a:hover{
@@ -255,7 +260,7 @@ position: relative;
 white-space: nowrap;
 text-decoration: none;
 text-align: left;
-}.sidebar ul li a span,.sidebar ul li i{
+}.sidebar ul li a,.sidebar ul li i{
 /* font-size: 14px;
 font-weight: 300; */
 letter-spacing: 1.5px;
