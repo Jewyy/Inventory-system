@@ -75,6 +75,7 @@ function redirect($url, $permanent = false)
 function total_price($totals){
    $sum = 0;
    $sub = 0;
+   $profit = 0;
    foreach($totals as $total ){
      $sum += $total['total_saleing_price'];
      $sub += $total['total_buying_price'];
@@ -104,6 +105,10 @@ function make_date(){
 /* Function for  Readable date time
 /*--------------------------------------------------------------*/
 function count_id(){
+  static $count = 1;
+  return $count++;
+}
+function count_id2(){
   static $count = 1;
   return $count++;
 }
