@@ -10,6 +10,11 @@ $products = join_product_table();
     <?php echo display_msg($msg); ?>
   </div>
   <div class="clearfix">
+    <div class="pull-left">
+      <div  class="headertext">
+        Manage Products
+      </div>
+    </div>
     <div class="pull-right">
       <a href="add_product.php" class="btn btn-success"> <img src="./asset/plus.svg">Add Product</a>
     </div>
