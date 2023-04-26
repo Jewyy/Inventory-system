@@ -37,6 +37,23 @@ function find_by_id($table,$id)
      }
 }
 /*--------------------------------------------------------------*/
+/* Function for Find product's name by sale's id
+/*--------------------------------------------------------------*/
+function find_product_name_by_sale_id($id) {
+  global $db;
+  $sql = "SELECT p.name
+          FROM products p
+          JOIN sales s ON p.id = s.product_id
+          WHERE s.id = '{$id}'";
+  $result = $db->query($sql);
+  if ($result) {
+    $row = $db->fetch_assoc($result);
+    return $row['name'];
+  } else {
+    return null;
+  }
+}
+/*--------------------------------------------------------------*/
 /* Function for Delete data from table by id
 /*--------------------------------------------------------------*/
 function delete_by_id($table,$id)
