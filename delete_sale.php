@@ -28,12 +28,28 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
 
 
 <?php include_once('layouts/header.php'); ?>
-<style>
-  .lightgray  {
-    color: #909090;
-  }
-</style>
-<div class="row">
+
+<div class="content">
+    <div class="box-header">
+        <div class="headertext">Delete Sale</div>
+    </div>
+    <div class="max-width" style="padding-top: 50px;">
+        <!-- <img src="uploads/products/<?php echo $product['image']; ?>" style ="width:200px; height:200px;"alt=""> -->
+        <div class="content-text">Are you sure you want to delete “<?php echo remove_junk($product_name); ?>” ?</div>
+        <div>
+            <td class="text-center"> Quantity: <?php echo remove_junk($sale['qty']); ?></td>
+            <td class="text-center">| Sale Date: <?php echo remove_junk($sale['date']); ?></td>
+        </div>
+        <div class="group-btn">
+            <form method="post"> <input type="hidden" name="confirm" value="yes">
+                <a href="sales.php" class="btn btn-default">Cancel</a>
+                <button type="submit" class="btn btn-danger">Delete product</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
   </div>
@@ -43,9 +59,6 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
         <strong>
           <span class="glyphicon glyphicon-trash"></span>
           <span class="lightgray">Are you sure you want to delete </span> "<?php echo remove_junk($product_name); ?>" ?
-          <!-- <?php foreach ($sale as $sale) : ?>
-             
-          <?php endforeach; ?> -->
         </strong>
       </div>
       <div class="panel-body">
@@ -59,5 +72,5 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == 'yes') {
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <?php include_once('layouts/footer.php'); ?>
