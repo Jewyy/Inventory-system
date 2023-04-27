@@ -47,104 +47,86 @@ if (isset($_POST['product'])) {
 
 ?>
 <?php include_once('layouts/header.php'); ?>
+
+<style>
+  .input-group {
+    display: block;
+  }
+
+  #preview-image {
+    max-width: 150px;
+    /* height: auto; */
+    max-height: 150px;
+  }
+</style>
+
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
   </div>
 </div>
+<div class="box-header">
+  <div class="headertext">Edit Product</div>
+</div>
 <div class="row">
-  <div class="col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <strong>
-          <span class="glyphicon glyphicon-th"></span>
-          <span>Edit Product</span>
-        </strong>
-      </div>
-      <div class="panel-body">
-        <div class="col-md-12">
-          <form method="post" action="edit_product.php?id=<?php echo (int)$product['id'] ?>">
-            <div class="form-group">
-              <!-- <div class="input-group"> -->
-              <!-- <span class="input-group-addon">
-                   <i class="glyphicon glyphicon-th-large"></i>
-                  </span> -->
-              <p class="topic"><b>Product Name</b></p>
-              <input type="text" class="form-control" name="product-title" value="<?php echo remove_junk($product['name']); ?>">
-              <!-- </div> -->
+  <div class="col-md-12">
+    <div class="panel">
+      <div>
+        <form method="post" class="inner-width" action="edit_product.php?id=<?php echo (int)$product['id'] ?>">
+          <div class="form-groupInput">
+            <label for="product-title">Product Name</label>
+            <input type="text" class="form-control" name="product-title" id="product-title" value="<?php echo remove_junk($product['name']); ?>">
+          </div>
+          <div class="form-groupInput">
+            <label for="product-title">Product Category</label>
+            <select class="form-control" name="product-category" id="product-category">
+              <option value=""> Select a category</option>
+              <?php foreach ($all_categories as $cat) : ?>
+                <option value="<?php echo (int)$cat['id']; ?>" <?php if ($product['categorie_id'] === $cat['id']) : echo "selected";
+                                                                endif; ?>>
+                  <?php echo remove_junk($cat['name']); ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
+            <label for="product-photo">Product Image</label>
+            <div class="input-group">
+              <img id="preview-image" src="./uploads/products/home-button.png" alt="Preview Image">
             </div>
-            <div class="form-group">
-              <!-- <div class="row"> -->
-              <!-- <div class="col-md-6"> -->
-              <p class="topic"><b>Product Category</b></p>
-              <select class="form-control" name="product-categorie">
-                <option value=""> Select a categorie</option>
-                <?php foreach ($all_categories as $cat) : ?>
-                  <option value="<?php echo (int)$cat['id']; ?>" <?php if ($product['categorie_id'] === $cat['id']) : echo "selected";
+          </div>
+          <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
+            <select class="form-control" name="product-photo" id="product-photo">
+              <option value=""> No image</option>
+              <?php foreach ($all_photo as $photo) : ?>
+                <option value="<?php echo (int)$photo['id']; ?>" <?php if ($product['media_id'] === $photo['id']) : echo "selected";
                                                                   endif; ?>>
-                    <?php echo remove_junk($cat['name']); ?></option>
-                <?php endforeach; ?>
-              </select>
-            </div>
-            <!-- </div> -->
-            <div class="form-group">
-              <!-- <div class="col-md-6"> -->
-              <p class="topic"><b>Product Image</b></p>
-              <select class="form-control" name="product-photo">
-                <option value=""> No image</option>
-                <?php foreach ($all_photo as $photo) : ?>
-                  <option value="<?php echo (int)$photo['id']; ?>" <?php if ($product['media_id'] === $photo['id']) : echo "selected";
-                                                                    endif; ?>>
-                    <?php echo $photo['file_name'] ?></option>
-                <?php endforeach; ?>
-              </select>
-            </div>
-            <!-- </div> -->
-
-            <!-- <div class="form-group"> -->
-            <!-- <div class="row"> -->
-            <!-- <div class="col-md-4"> -->
-            <div class="form-group">
-              <label for="qty">Product Quantity</label>
-              <!-- <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-shopping-cart"></i>
-                </span> -->
-              <input type="number" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
-              <!-- </div> -->
-            </div>
-            <!-- </div> -->
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-6">
-                  <label for="qty">Buying price</label>
-                  <!-- <div class="input-group"> -->
-                  <!-- <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-usd"></i>
-                    </span> -->
-                  <input type="number" class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']); ?>">
-                  <!-- <span class="input-group-addon">.00</span> -->
-                  <!-- </div> -->
-                </div>
-                <div class="col-md-6">
-                  <label for="qty">Selling price</label>
-                  <!-- <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-usd"></i>
-                    </span> -->
-                  <input type="number" class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']); ?>">
-                  <!-- <span class="input-group-addon">.00</span> -->
-                  <!-- </div> -->
-                </div>
+                  <?php echo $photo['file_name'] ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="form-groupInput">
+            <label for="product-quantity">Product Quantity</label>
+            <input type="number" class="form-control" name="product-quantity" id="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
+          </div>
+          <div class="form-groupInput">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="buying-price">Buying price</label>
+                <input type="number" class="form-control" name="buying-price" id="buying-price" value="<?php echo remove_junk($product['buy_price']); ?>">
+              </div>
+              <div class="col-md-6">
+                <label for="selling-price">Selling price</label>
+                <input type="number" class="form-control" name="selling-price" id="selling-price" value="<?php echo remove_junk($product['sale_price']); ?>">
               </div>
             </div>
-            <!-- </div> -->
-            <div class="button">
-              <a href="product.php" class="btn btn-default btn-danger">Cancel</a>
-              <button type="submit" name="product" class="btn btn-success">Update</button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="group-btn" style="padding-top: 16px;">
+            <form method="post"> <input type="hidden" name="confirm" value="yes">
+              <a href="product.php" class="btn btn-default">Cancel</a>
+              <button type="submit" name="product" class="btn btn-primary">Update</button>
+            </form>
+          </div>
+        </form>
       </div>
     </div>
   </div>
