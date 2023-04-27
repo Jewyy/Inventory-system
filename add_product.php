@@ -96,13 +96,10 @@ if (isset($_POST['add_product'])) {
     text-align: center;
   }
 
-  .input-group {
+  .input-groupInput {
     display: block;
   }
 
-  .input-group-addon {
-    display: none;
-  }
 </style>
 
 <div class="row">
@@ -110,98 +107,67 @@ if (isset($_POST['add_product'])) {
     <?php echo display_msg($msg); ?>
   </div>
 </div>
+<div class="box-header">
+  <div class="headertext">Add Product</div>
+</div>
 <div class="row">
-  <div class="col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <strong>
-          <span class="glyphicon glyphicon-th"></span>
-          <span>Add New Product</span>
-        </strong>
-      </div>
-      <div class="panel-body">
-        <div class="col-md-12">
-          <form method="post" action="add_product.php" class="clearfix" enctype="multipart/form-data">
-            <div class="form-group">
-              <p class="topic"><b>Product Name</b></p>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-th-large"></i>
-                </span>
-                <input type="text" class="form-control" name="product-title" placeholder="Enter Product Name">
-              </div>
+  <div class="col-md-12">
+    <div class="panel">
+      <div>
+        <form method="post" action="add_product.php" class="inner-width" enctype="multipart/form-data">
+          <div class="form-groupInput">
+            <label for="product-title">Product Name</label>
+            <input type="text" class="form-control" name="product-title" id="product-title" placeholder="Enter Product Name">
+          </div>
+          <div class="form-groupInput">
+            <label for="product-category">Product Category</label>
+            <select class="form-control" name="product-category" id="product-category">
+              <option value="">Select Product Category</option>
+              <?php foreach ($all_categories as $cat) : ?>
+                <option value="<?php echo (int)$cat['id'] ?>">
+                  <?php echo $cat['name'] ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+          <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
+            <label for="product-photo">Product Image</label>
+            <div class="input-groupInput">
+              <img id="preview-image" src="" alt="Preview Image">
             </div>
-            <div class="form-group">
-              <!-- <div class="row"> -->
-              <!-- <div class="col-md-6"> -->
-              <p class="topic"><b>Product Category</b></p>
-              <select class="form-control" name="product-categorie">
-                <option value="">Select Product Category</option>
-                <?php foreach ($all_categories as $cat) : ?>
-                  <option value="<?php echo (int)$cat['id'] ?>">
-                    <?php echo $cat['name'] ?></option>
-                <?php endforeach; ?>
-              </select>
-            </div>
-            <!-- </div> -->
-            <div class="form-group">
-              <p class="topic"><b>Product Image</b></p>
-              <div class="input-group">
-                <!-- <div id="img-preview"></div> -->
-                <img id="preview-image" src="" alt="Preview Image">
-              </div>
-            </div>
-            <div>
-              <select class="form-control" name="product-photo" onchange="handleSelectChange(event)">
-                <option value="">Select Product Photo</option>
-                <?php foreach ($all_photo as $photo) : ?>
-                  <option value="<?php echo (int)$photo['id'] ?>">
-                    <?php echo $photo['file_name'] ?></option>
-                <?php endforeach; ?>
-              </select>
-            </div>
+          </div>
+          <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
+            <select class="form-control" name="product-photo" id="product-photo" onchange="handleSelectChange(event)">
+              <option value="">Select Product Photo</option>
+              <?php foreach ($all_photo as $photo) : ?>
+                <option value="<?php echo (int)$photo['id'] ?>">
+                  <?php echo $photo['file_name'] ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <!-- <div class="col-md-4"> -->
-              <p class="topic"><b>Product Quantity</b></p>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-shopping-cart"></i>
-                </span>
-                <input type="number" class="form-control" name="product-quantity" placeholder="Product Quantity">
+          <div class="form-groupInput">
+            <label for="product-quantity">Product Quantity</label>
+            <input type="number" class="form-control" name="product-quantity" id="product-quantity" placeholder="Product Quantity">
+          </div>
+          <div class="form-groupInput">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="buying-price">Buying Price</label>
+                <input type="number" class="form-control" name="buying-price" id="buying-price" placeholder="Buying Price">
               </div>
-              <!-- </div> -->
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="topic"><b>Buying Price</b></p>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-usd"></i>
-                    </span>
-                    <input type="number" class="form-control" name="buying-price" placeholder="Buying Price">
-                    <!-- <span class="input-group-addon">.00</span> -->
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <p class="topic"><b>Selling Price</b></p>
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-usd"></i>
-                    </span>
-                    <input type="number" class="form-control" name="saleing-price" placeholder="Selling Price">
-                    <!-- <span class="input-group-addon">.00</span> -->
-                  </div>
-                </div>
+              <div class="col-md-6">
+                <label for="selling-price">Selling Price</label>
+                <input type="number" class="form-control" name="selling-price" id="selling-price" placeholder="Selling Price">
               </div>
             </div>
-            <div class="button">
-              <a href="product.php" class="btn btn-default btn-danger">Cancel</a>
-              <button type="submit" name="add_product" class="btn btn-success">Add</button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="group-btn" style="padding-top: 16px;">
+            <form method="post"> <input type="hidden" name="confirm" value="yes">
+              <a href="product.php" class="btn btn-default">Cancel</a>
+              <button type="submit" name="add_product" class="btn btn-primary">Add Product</button>
+            </form>
+          </div>
+        </form>
       </div>
     </div>
   </div>
