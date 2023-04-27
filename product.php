@@ -11,7 +11,7 @@ $products = join_product_table();
   </div>
   <div class="clearfix">
     <div class="pull-left">
-      <div  class="headertext">
+      <div class="headertext">
         Manage Products
       </div>
     </div>
