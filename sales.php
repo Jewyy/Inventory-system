@@ -54,9 +54,8 @@ $sales = find_all_sale();
         <thead>
           <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
             <th class="sales-tab" style="width: 20px;">No.</th>
-            <th class="sales-tab" style="width: 30px;"> Product name </th>
+            <th class="sales-tab" style="width: 25px;"> Product name </th>
             <th class="sales-tab" style="width: 10%;"> Quantity</th>
-            <th class="sales-tab" style="width: 10%;"> Total </th>
             <th class="sales-tab" style="width: 10%;"> Date </th>
             <th class="sales-tab" style="width: 10%;"> Actions </th>
           </tr>
@@ -67,7 +66,6 @@ $sales = find_all_sale();
               <td><?php echo count_id(); ?></td>
               <td><?php echo remove_junk($sale['name']); ?></td>
               <td class="display-font-table"><?php echo (int)$sale['qty']; ?></td>
-              <td class="display-font-table"><?php echo remove_junk($sale['price']); ?></td>
               <td style="font-weight:bold;"><?php echo $sale['date']; ?></td>
               <td>
                 <div class="btn-group" style="padding-left: 15px;">
