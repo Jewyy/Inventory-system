@@ -50,10 +50,9 @@ if (isset($_POST['add_product'])) {
 <?php include_once('layouts/header.php'); ?>
 
 <style>
-  #img-preview {
+  /* #img-preview {
     display: none;
     width: 155px;
-    /* border: 2px solid #333; */
     margin-bottom: 20px;
   }
 
@@ -61,12 +60,12 @@ if (isset($_POST['add_product'])) {
     width: 10%;
     height: auto;
     display: block;
-  }
+  } */
 
   #preview-image {
-    max-width: 200px;
+    max-width: 150px;
     /* height: auto; */
-    max-height: 200px;
+    max-height: 150px;
   }
 
   [type="file"] {
@@ -96,7 +95,7 @@ if (isset($_POST['add_product'])) {
     text-align: center;
   }
 
-  .input-groupInput {
+  .input-group {
     display: block;
   }
 
@@ -131,7 +130,7 @@ if (isset($_POST['add_product'])) {
           </div>
           <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
             <label for="product-photo">Product Image</label>
-            <div class="input-groupInput">
+            <div class="input-group">
               <img id="preview-image" src="" alt="Preview Image">
             </div>
           </div>
