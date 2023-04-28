@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Add Sale';
 require_once('includes/load.php');
+page_require_level(3);
 
 if(isset($_POST['add_sale'])){
   $req_fields = array('product_id','quantity','total','date');

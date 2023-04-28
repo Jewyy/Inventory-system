@@ -2,7 +2,7 @@
   $page_title = 'Sale Report';
   require_once('includes/load.php');
   include_once('layouts/header.php'); 
-
+  page_require_level(3);
 ?>
 <script>
   $(document).ready(function() {

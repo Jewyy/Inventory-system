@@ -1,8 +1,6 @@
 <?php
 require_once('includes/load.php');
-
-// Checkin What level user has permission to view this page
-// page_require_level(3);
+page_require_level(3);
 
 $sale = find_by_id('sales', (int) $_GET['id']);
 $product_name = find_product_name_by_sale_id($sale['id']);

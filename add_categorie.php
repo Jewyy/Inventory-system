@@ -1,6 +1,7 @@
 <?php
   $page_title = 'Add categorie';
   require_once('includes/load.php');
+  page_require_level(3);
 ?>
 <?php
  if(isset($_POST['add_cat'])){
