@@ -54,6 +54,24 @@ function find_product_name_by_sale_id($id) {
   }
 }
 /*--------------------------------------------------------------*/
+/* Function for Find media's name by product's id
+/*--------------------------------------------------------------*/
+function find_media_name_by_product_id($productId) {
+  global $db;
+  $sql =   "SELECT media.file_name 
+            FROM products
+            JOIN media ON products.media_id = media.id 
+            WHERE products.id = $productId";
+  $result = $db->query($sql);
+  $row = $db->fetch_assoc($result);
+  return $row['file_name'];
+  // if ($result) {
+  //   return $row['name'];
+  // } else {
+  //   return null;
+  // }
+}
+/*--------------------------------------------------------------*/
 /* Function for Delete data from table by id
 /*--------------------------------------------------------------*/
 function delete_by_id($table,$id)

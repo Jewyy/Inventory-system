@@ -4,6 +4,7 @@ require_once('includes/load.php');
 ?>
 <?php
 $product = find_by_id('products', (int)$_GET['id']);
+$media_name = find_media_name_by_product_id($product['id']);
 $all_categories = find_all('categories');
 $all_photo = find_all('media');
 if (!$product) {
@@ -78,8 +79,8 @@ if (isset($_POST['product'])) {
             <input type="text" class="form-control" name="product-title" id="product-title" value="<?php echo remove_junk($product['name']); ?>">
           </div>
           <div class="form-groupInput">
-            <label for="product-title">Product Category</label>
-            <select class="form-control" name="product-category" id="product-category">
+            <label for="product-categorie">Product Category</label>
+            <select class="form-control" name="product-categorie" id="product-categorie">
               <option value=""> Select a category</option>
               <?php foreach ($all_categories as $cat) : ?>
                 <option value="<?php echo (int)$cat['id']; ?>" <?php if ($product['categorie_id'] === $cat['id']) : echo "selected";
@@ -91,11 +92,11 @@ if (isset($_POST['product'])) {
           <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
             <label for="product-photo">Product Image</label>
             <div class="input-group">
-              <img id="preview-image" src="./uploads/products/home-button.png" alt="Preview Image">
+              <img id="preview-image" src="./uploads/products/<?php echo $media_name; ?>" alt="Preview Image">
             </div>
           </div>
           <div class="form-groupInput" style="height: auto; gap: 4px; margin-bottom: 4px;">
-            <select class="form-control" name="product-photo" id="product-photo">
+            <select class="form-control" name="product-photo" id="product-photo" onchange="handleSelectChange(event)">
               <option value=""> No image</option>
               <?php foreach ($all_photo as $photo) : ?>
                 <option value="<?php echo (int)$photo['id']; ?>" <?php if ($product['media_id'] === $photo['id']) : echo "selected";
@@ -115,8 +116,8 @@ if (isset($_POST['product'])) {
                 <input type="number" class="form-control" name="buying-price" id="buying-price" value="<?php echo remove_junk($product['buy_price']); ?>">
               </div>
               <div class="col-md-6">
-                <label for="selling-price">Selling price</label>
-                <input type="number" class="form-control" name="selling-price" id="selling-price" value="<?php echo remove_junk($product['sale_price']); ?>">
+                <label for="saleing-price">Selling price</label>
+                <input type="number" class="form-control" name="saleing-price" id="saleing-price" value="<?php echo remove_junk($product['sale_price']); ?>">
               </div>
             </div>
           </div>
@@ -131,5 +132,23 @@ if (isset($_POST['product'])) {
     </div>
   </div>
 </div>
+
+<script>
+  function handleSelectChange(event) {
+    var selectedOption = event.target.options[event.target.selectedIndex];
+    var fileName = selectedOption.text;
+
+    var fileURL = "uploads/products/" + fileName; // modify this to the actual path of your image directory
+
+    // display the selected image in the img element
+    document.getElementById('preview-image').src = fileURL;
+
+    // display the selected image in the div element
+    document.getElementById('img-preview').style.backgroundImage = 'url(' + fileURL + ')';
+
+    // update the selected option text
+    document.getElementById('selected-option').textContent = fileName;
+  }
+</script>
 
 <?php include_once('layouts/footer.php'); ?>
