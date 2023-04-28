@@ -14,17 +14,18 @@
  $sales_monthly = monthlySales($year,$month);
 
   // Get the first and last date in the sales_monthly array
-  $first_sale_monthly = reset($sales_monthly);
-  $last_sale_monthly = end($sales_monthly);
-  $start_date_monthly = $first_sale_monthly['date'];
-  $end_date_monthly = $last_sale_monthly['date'];
-  $results_monthly = find_sale_by_dates($start_date_monthly,$end_date_monthly);
+  $start_date_monthly = reset($sales_monthly);
+  $end_date_monthly = end($sales_monthly);
+  if (is_array($start_date_monthly) || is_array($end_date_monthly)){
+    $results_monthly = find_sale_by_dates($start_date_monthly['date'],$end_date_monthly['date']);
+  }
+  else $results_monthly = 0;
 
-  $first_sale_daily = reset($sales_daily);
-  $last_sale_daily = end($sales_daily);
-  $start_date_daily = $first_sale_daily['date'];
-  // $end_date_daily = $last_sale_daily['date'];
-  $results_daily = find_sale_by_dates($start_date_daily,$start_date_daily);
+  $start_date_daily = reset($sales_daily);
+  $end_date_daily = end($sales_daily);
+  if (is_array($start_date_daily) || is_array($end_date_daily))
+    $results_daily = find_sale_by_dates($start_date_daily['date'],$end_date_daily['date']);
+  else $results_daily = 0;
 ?>
 <style>
   .show-grand-profit{
@@ -79,12 +80,12 @@
 
 <?php include_once('layouts/header.php'); ?>
 <div class="row">
+<div class="headertext">Sales Board</div>
   <div class="col-md-6">
     <?php echo display_msg($msg); ?>
   </div>
 </div>
 <div class="col-md-12">
-<div class="headertext">Sales Board</div>
 <div class="contain-tab"> 
   <div class="tab" id="dailyTab">Daily</div>
   <div class="tab" id="monthlyTab">Monthly</div>
@@ -96,7 +97,7 @@
     <div class="panel">
       <!-- <div class="panel-heading clearfix"> -->
         <strong>
-          <span style="font-size: 22px;">Daily Sales</span>
+          <span style="font-size: 22px;">Daily Sales </span>
         </strong>
       <!-- </div> -->
         <div style="display: flex; margin: 50px 0px;">
