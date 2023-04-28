@@ -15,7 +15,8 @@ if (!$sale) {
 
 if (isset($_POST['update_sale'])) {
     // $req_fields = ['title', 'quantity', 'price', 'total', 'date'];
-    $req_fields = ['title', 'quantity', 'total', 'date'];
+    // $req_fields = ['title', 'quantity', 'total', 'date'];
+    $req_fields = ['title', 'quantity', 'date'];
     validate_fields($req_fields);
     if (empty($errors)) {
         $p_id = $db->escape((int) $product['id']);
@@ -104,13 +105,13 @@ if (isset($_POST['update_sale'])) {
                                             value="<?php echo remove_junk($product['sale_price']); ?>">
                                     </td>
                                 </div> -->
-                                <div class="form-groupInput">
+                                <!-- <div class="form-groupInput">
                                     <label for="quantity">Price:</label>
                                     <td>
                                         <input type="text" class="form-control" name="total"
                                             value="<?php echo remove_junk($sale['price']); ?>">
                                     </td>
-                                </div>
+                                </div> -->
                                 <div class="form-groupInput">
                                     <label for="quantity">Date:</label>
                                     <td id="s_date">
