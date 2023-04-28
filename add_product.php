@@ -119,8 +119,8 @@ if (isset($_POST['add_product'])) {
             <input type="text" class="form-control" name="product-title" id="product-title" placeholder="Enter Product Name">
           </div>
           <div class="form-groupInput">
-            <label for="product-category">Product Category</label>
-            <select class="form-control" name="product-category" id="product-category">
+            <label for="product-categorie">Product Category</label>
+            <select class="form-control" name="product-categorie" id="product-categorie">
               <option value="">Select Product Category</option>
               <?php foreach ($all_categories as $cat) : ?>
                 <option value="<?php echo (int)$cat['id'] ?>">
@@ -155,8 +155,8 @@ if (isset($_POST['add_product'])) {
                 <input type="number" class="form-control" name="buying-price" id="buying-price" placeholder="Buying Price">
               </div>
               <div class="col-md-6">
-                <label for="selling-price">Selling Price</label>
-                <input type="number" class="form-control" name="selling-price" id="selling-price" placeholder="Selling Price">
+                <label for="saleing-price">Selling Price</label>
+                <input type="number" class="form-control" name="saleing-price" id="saleing-price" placeholder="Selling Price">
               </div>
             </div>
           </div>
