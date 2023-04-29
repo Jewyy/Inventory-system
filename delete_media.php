@@ -1,6 +1,6 @@
 <?php
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  page_require_level(3);
 ?>
 <?php
   $find_media = find_by_id('media',(int)$_GET['id']);

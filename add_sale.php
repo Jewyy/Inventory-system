@@ -1,9 +1,11 @@
 <?php
 $page_title = 'Add Sale';
 require_once('includes/load.php');
+page_require_level(3);
 
-if (isset($_POST['add_sale'])) {
-  $req_fields = array('product_id', 'quantity', 'total', 'date');
+if(isset($_POST['add_sale'])){
+  $req_fields = array('product_id','quantity','date');
+  
   validate_fields($req_fields);
 
   if (empty($errors)) {
@@ -61,13 +63,13 @@ if (isset($_POST['add_sale'])) {
             <label for="quantity">Quantity:</label>
             <input type="text" class="form-control" id="quantity" name="quantity">
           </div>
-          <div class="form-groupInput">
+          <!-- <div class="form-groupInput">
             <label for="total">Total:</label>
             <input type="text" class="form-control" id="total" name="total">
-          </div>
+          </div> -->
           <div class="form-groupInput">
             <label for="date">Date:</label>
-            <input type="date" class="form-control datepicker" id="date" name="date" data-date-format="">
+            <input type="text" class="form-control datepicker" id="date" name="date" placeholder="yyyy-mm-dd" data-date-format=" ">
           </div>
 
           <div class="group-btn" style="padding-top: 16px;">

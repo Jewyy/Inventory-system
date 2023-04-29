@@ -1,5 +1,6 @@
 <?php
   require_once('includes/load.php');
+  page_require_level(3);
 ?>
 
 <?php

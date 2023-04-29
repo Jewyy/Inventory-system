@@ -215,6 +215,26 @@ function tableExists($table){
     $result = $db->query($sql);
     return($db->num_rows($result) === 0 ? true : false);
   }
+  /*--------------------------------------------------------------*/
+  /* Function for cheaking which user level has access to page
+  /*--------------------------------------------------------------*/
+  function page_require_level($require_level){
+    global $session;
+    $current_user = current_user();
+    $login_level = find_by_groupLevel($current_user['user_level']);
+    //if user not login
+    if (!$session->isUserLoggedIn(true)):
+           $session->msg('d','Please login...');
+           redirect('index.php', false);
+     //cheackin log in User level and Require level is Less than or equal to
+    elseif($current_user['user_level'] <= (int)$require_level):
+             return true;
+     else:
+           $session->msg("d", "Sorry! you dont have permission to view the page.");
+           redirect('home.php', false);
+       endif;
+
+    }
    /*--------------------------------------------------------------*/
    /* Function for Finding all product name
    /* JOIN with categorie  and media database table

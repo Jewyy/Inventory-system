@@ -2,7 +2,7 @@
   $page_title = 'Sale Report';
   require_once('includes/load.php');
   include_once('layouts/header.php'); 
-
+  page_require_level(3);
 ?>
 <script>
   $(document).ready(function() {
@@ -52,11 +52,11 @@
 </div>
 
 <div class="row">
+<div class="headertext">Sales Report</div>
 <div class="col-md-12">
   <div class="col-md-12">
     <div class="panel">
       <!-- <div class="panel-heading"></div> -->
-      <div class="headertext">Sales Report</div>
       <div class="panel-body" style="padding: 15px 0px;">
           <form id="sales-report-form" class="clearfix" style="width:100%; max-width: 900px; margin: auto;"  method="post" action="">
             <div class="form-group ">

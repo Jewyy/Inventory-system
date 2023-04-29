@@ -1,6 +1,7 @@
 <?php
   $page_title = 'Edit categorie';
   require_once('includes/load.php');
+  page_require_level(3);
 ?>
 <?php
   $categorie = find_by_id('categories',(int)$_GET['id']);

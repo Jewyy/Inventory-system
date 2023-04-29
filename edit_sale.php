@@ -1,8 +1,7 @@
 <?php
 $page_title = 'Edit sale';
 require_once 'includes/load.php';
-// Checkin What level user has permission to view this page
-//  page_require_level(3);
+page_require_level(3);
 ?>
 <?php
 $sale = find_by_id('sales', (int) $_GET['id']);
@@ -16,7 +15,8 @@ if (!$sale) {
 
 if (isset($_POST['update_sale'])) {
     // $req_fields = ['title', 'quantity', 'price', 'total', 'date'];
-    $req_fields = ['title', 'quantity', 'total', 'date'];
+    // $req_fields = ['title', 'quantity', 'total', 'date'];
+    $req_fields = ['title', 'quantity', 'date'];
     validate_fields($req_fields);
     if (empty($errors)) {
         $p_id = $db->escape((int) $product['id']);
@@ -105,17 +105,17 @@ if (isset($_POST['update_sale'])) {
                                             value="<?php echo remove_junk($product['sale_price']); ?>">
                                     </td>
                                 </div> -->
-                                <div class="form-groupInput">
+                                <!-- <div class="form-groupInput">
                                     <label for="quantity">Price:</label>
                                     <td>
                                         <input type="text" class="form-control" name="total"
                                             value="<?php echo remove_junk($sale['price']); ?>">
                                     </td>
-                                </div>
+                                </div> -->
                                 <div class="form-groupInput">
                                     <label for="quantity">Date:</label>
                                     <td id="s_date">
-                                            <input type="date" class="form-control" name="date" data-date-format="yyyy-mm-dd" value="<?php echo date('Y-m-d', strtotime($sale['date'])); ?>">
+                                            <input type="text" class="form-control" name="date" placeholder="yyyy-mm-dd" data-date-format="yyyy-mm-dd" value="<?php echo date('Y-m-d', strtotime($sale['date'])); ?>">
                                     </td>
                                 </div>
                                 <!-- <td>

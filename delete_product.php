@@ -1,6 +1,8 @@
 <?php
 require_once 'includes/load.php';
 $page_title = 'Delete Product';
+page_require_level(3);
+
 $products = join_product_table();
 $product = find_by_id('products', (int) $_GET['id']);
 if (!$product) {

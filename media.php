@@ -1,7 +1,7 @@
 <?php
 $page_title = 'All Image';
 require_once('includes/load.php');
-// Checkin What level user has permission to view this page
+page_require_level(3);
 ?>
 <?php $media_files = find_all('media'); ?>
 <?php

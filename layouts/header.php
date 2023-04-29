@@ -1,7 +1,7 @@
 <?php $user = current_user(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
     <meta charset="UTF-8">
     <title><?php if (!empty($page_title)) {
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="libs/css/main.css" />
   </head>
   <body>
-  <?php  if (true): ?>
+  <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
       <div class="logo pull-left"> 
       <img src="asset/logo.svg" alt="logo-image" style="padding-left:22px;">
@@ -33,18 +33,6 @@
               <!-- <span><i class="caret"></i></span> -->
             </a>
             <ul class="dropdown-menu">
-              <li>
-                  <a href="profile.php?id=<?php echo (int)$user['id'];?>">
-                      <i class="glyphicon glyphicon-user"></i>
-                      Profile
-                  </a>
-              </li>
-             <li>
-                 <a href="edit_account.php" title="edit account">
-                     <i class="glyphicon glyphicon-cog"></i>
-                     Settings
-                 </a>
-             </li>
              <li class="last">
                  <a href="logout.php">
                      <i class="glyphicon glyphicon-off"></i>

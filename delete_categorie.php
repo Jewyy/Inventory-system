@@ -1,5 +1,7 @@
 <?php
   require_once('includes/load.php');
+  page_require_level(3);
+  
   $categorie = find_by_id('categories',(int)$_GET['id']);
   if(!$categorie){
     $session->msg("d","Missing Categorie id.");
