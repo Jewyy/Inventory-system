@@ -19,6 +19,7 @@ $sales = find_all_sale();
     padding-bottom: 50px;
     padding-top: 100px;
     padding-left: 200px;
+    width: 100%;
   }
 
   .sales-row-style {
@@ -52,11 +53,11 @@ $sales = find_all_sale();
       <table class="sales-table">
         <thead>
           <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
-            <th class="sales-tab" style="width: 20px;">No.</th>
-            <th class="sales-tab" style="width: 25px;"> Product name </th>
-            <th class="sales-tab" style="width: 5%;"> Quantity</th>
-            <th class="sales-tab" style="width: 5%;"> Date </th>
-            <th class="sales-tab" style="width: 5%;"> Actions </th>
+            <th class="sales-tab" style="width: 12.5%;">No.</th>
+            <th class="sales-tab" style="width: 50%;"> Product name </th>
+            <th class="sales-tab" style="width: 12.5%;"> Quantity</th>
+            <th class="sales-tab" style="width: 12.5%;"> Date </th>
+            <th class="sales-tab" style="width: 12.5%; text-align: center;"> Actions </th>
           </tr>
         </thead>
         <tbody>
