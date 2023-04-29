@@ -29,7 +29,7 @@
 	<a href="categorie.php" style="color:black;">
   <div class="panel-header">
     <div class="col-md-4">
-       <div class="panel panel-box clearfix">
+       <div class="panel panel-box clearfix" style="background-color:#fadad2">
          <div class="panel-icon pull-left bg-red">
           <i class="glyphicon glyphicon-th-large"></i>
         </div>
@@ -43,7 +43,7 @@
 	
 	<a href="product.php" style="color:black;">
     <div class="col-md-4">
-       <div class="panel panel-box clearfix">
+       <div class="panel panel-box clearfix" style="background-color:#d2d5fa">
          <div class="panel-icon pull-left bg-blue2">
           <i class="glyphicon glyphicon-shopping-cart"></i>
         </div>
@@ -56,9 +56,9 @@
 	</a>
 	
 	<a href="sales.php" style="color:black;">
-    <div class="col-md-4">
-       <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-green">
+    <div class="col-md-4" style="background-color:white">
+       <div class="panel panel-box clearfix" style="background-color:#fce69f;  ">
+         <div class="panel-icon pull-left bg-yellow">
           <i class="glyphicon glyphicon-usd"></i>
         </div>
         <div class="panel-value pull-right">
@@ -69,8 +69,8 @@
     </div>
 	</a>
    <div class="col-md-4">
-     <div class="panel panel-header" style="border-color:#FF7857">
-       <div class="panel-heading" style="background-color:#FF7857;">
+     <div class="panel panel-header" style="border-color:#008060">
+       <div class="panel-heading" style="background-color:#008060;">
          <strong>
            <span style="font-size:20px; color:white">Highest Selling Products</span>
          </strong>
@@ -98,8 +98,8 @@
      </div>
    </div>
    <div class="col-md-4">
-      <div class="panel panel-header" style="border-color:#7a83ee">
-        <div class="panel-heading" style="background-color:#7a83ee">
+      <div class="panel panel-header" style="border-color:#008060">
+        <div class="panel-heading" style="background-color:#008060">
           <strong>
             <span style="font-size:20px; color:white">Latest sales</span>
           </strong>
