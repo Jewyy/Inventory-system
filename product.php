@@ -34,7 +34,7 @@ $products = join_product_table();
             <th class="product-tab" style="width: 12.5%;"> Buying Price </th>
             <th class="product-tab" style="width: 12.5%;"> Selling Price </th>
             <th class="product-tab" style="width: 12.5%;"> Product Add </th>
-            <th class="product-tab" style="width: 10%; text-align: center;"> Action </th>
+            <th class="product-tab" style="width: 10%; text-align: center;"> Actions </th>
           </tr>
         </thead>
         <tbody>

@@ -49,7 +49,7 @@
                 <tr style="border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
                     <th class="product-tab text-center" style="width: 100px;">No.</th>
                     <th class="product-tab">Categories</th>
-                    <th class="product-tab text-center" style="width: 120px;">Action</th>
+                    <th class="product-tab text-center" style="width: 120px;">Actions</th>
                 </tr>
             </thead>
             <tbody>
