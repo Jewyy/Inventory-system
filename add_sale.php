@@ -79,7 +79,7 @@ if(isset($_POST['add_sale'])){
           </div> -->
           <div class="form-groupInput">
             <label for="date">Date:</label>
-            <input type="date" class="form-control datepicker" id="date" name="date" data-date-format="">
+            <input type="text" class="form-control datepicker" id="date" name="date" placeholder="yyyy-mm-dd" data-date-format=" ">
           </div>
           
           <div class="group-btn" style="padding-top: 16px;">
