@@ -73,11 +73,11 @@
   
   <div class="row">
    <div class="col-md-4">
-     <div class="panel panel-header">
-       <div class="panel-heading">
+     <div class="panel panel-header" style="border-color:#FF7857">
+       <div class="panel-heading" style="background-color:#FF7857;">
          <strong>
            <!-- <span class="glyphicon glyphicon-th"></span> -->
-           <span style="font-size:15pt;">Highest Selling Products</span>
+           <span style="font-size:20px; color:white">Highest Selling Products</span>
          </strong>
        </div>
        <div class="panel-body">
@@ -103,11 +103,11 @@
      </div>
    </div>
    <div class="col-md-4">
-      <div class="panel panel-header">
-        <div class="panel-heading">
+      <div class="panel panel-header" style="border-color:#7a83ee">
+        <div class="panel-heading" style="background-color:#7a83ee">
           <strong>
             <!-- <span class="glyphicon glyphicon-th"></span> -->
-            <span style="font-size:15pt;">LATEST SALES</span>
+            <span style="font-size:20px; color:white">Latest sales</span>
           </strong>
         </div>
         <div class="panel-body">
@@ -140,11 +140,11 @@
    </div>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-header">
-      <div class="panel-heading">
+    <div class="panel panel-header"  style="border-color:#008060">
+      <div class="panel-heading"  style="background-color:#008060">
         <strong>
           <!-- <span class="glyphicon glyphicon-th"></span> -->
-          <span style="font-size:15pt;">Recently Added Products</span>
+          <span style="font-size:20px; color:white">Recently Added Products</span>
         </strong>
       </div>
       <div class="panel-body">
