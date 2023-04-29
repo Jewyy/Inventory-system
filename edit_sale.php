@@ -115,7 +115,7 @@ if (isset($_POST['update_sale'])) {
                                 <div class="form-groupInput">
                                     <label for="quantity">Date:</label>
                                     <td id="s_date">
-                                            <input type="date" class="form-control" name="date" data-date-format="yyyy-mm-dd" value="<?php echo date('Y-m-d', strtotime($sale['date'])); ?>">
+                                            <input type="text" class="form-control" name="date" placeholder="yyyy-mm-dd" data-date-format="yyyy-mm-dd" value="<?php echo date('Y-m-d', strtotime($sale['date'])); ?>">
                                     </td>
                                 </div>
                                 <!-- <td>
