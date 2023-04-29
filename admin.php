@@ -113,7 +113,7 @@
         <div class="panel-body">
           <table class="table">
        <thead>
-         <tr style="border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
+         <tr style="border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 2px 0px #E6E6E6">
            <th class="text-center" style="width: 50px;">#</th>
            <th>Product Name</th>
            <th>Date</th>

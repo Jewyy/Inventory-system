@@ -12,7 +12,7 @@ $products = join_product_table();
   </div>
   <div class="clearfix">
     <div class="pull-left">
-      <div  class="headertext">
+      <div class="headertext">
         Manage Products
       </div>
     </div>
@@ -27,13 +27,13 @@ $products = join_product_table();
       <table class="product-table">
         <thead>
           <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
-            <th class="product-tab" style="width: 30px;">No.</th>
-            <th class="product-tab" style="width: 50px;"> Photo</th>
-            <th class="product-tab" style="width: 20px;"> Product Name </th>
-            <th class="product-tab" style="width: 10%;"> In-stock </th>
-            <th class="product-tab" style="width: 10%;"> Buying Price </th>
-            <th class="product-tab" style="width: 10%;"> Selling Price </th>
-            <th class="product-tab" style="width: 10%;"> Product Add </th>
+            <th class="product-tab" style="width: 7.5%;">No.</th>
+            <th class="product-tab" style="width: 12.5%;"> Photo</th>
+            <th class="product-tab" style="width: 20%;"> Product Name </th>
+            <th class="product-tab" style="width: 12.5%;"> In-stock </th>
+            <th class="product-tab" style="width: 12.5%;"> Buying Price </th>
+            <th class="product-tab" style="width: 12.5%;"> Selling Price </th>
+            <th class="product-tab" style="width: 12.5%;"> Product Add </th>
             <th class="product-tab" style="width: 10%; text-align: center;"> Action </th>
           </tr>
         </thead>
