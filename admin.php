@@ -20,52 +20,16 @@
    </div>
 </div>
   <div class="row">
-  <ul>
-  <li>
-    <a href="home.php">
-      <i class="glyphicon glyphicon-home"></i>
-      <span>Dashboard</span>
-    </a>
-  </li>
-  <li>
-    <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-th-list"></i>
-       <span>Sales</span>
-      </a>
-      <ul class="nav submenu">
-         <li><a href="">Manage Sales</a> </li>
-         <li><a href="">Add Sale</a> </li>
-     </ul>
-  </li>
-  <li>
-    <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-signal"></i>
-       <span>Sales Report</span>
-      </a>
-      <ul class="nav submenu">
-        <li><a href="">Sales by dates </a></li>
-        <li><a href="">Monthly sales</a></li>
-        <li><a href="">Daily sales</a> </li>
-      </ul>
-  </li>
-</ul>
-
-    <a href="users.php" style="color:black;">
-		<div class="col-md-3">
-       <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-secondary1">
-          <i class="glyphicon glyphicon-user"></i>
-        </div>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_user['total']; ?> </h2>
-          <p class="text-muted">Users</p>
-        </div>
-       </div>
+    <div class="panel-heading">
+        <strong>
+          <span style="font-size:22pt;">All Categories</span>
+       </strong>
+      </div>
     </div>
-	</a>
-	
 	<a href="categorie.php" style="color:black;">
-    <div class="col-md-3">
+  <div class="panel-header">
+ 
+    <div class="col-md-4">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-red">
           <i class="glyphicon glyphicon-th-large"></i>
@@ -79,7 +43,7 @@
 	</a>
 	
 	<a href="product.php" style="color:black;">
-    <div class="col-md-3">
+    <div class="col-md-4">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-blue2">
           <i class="glyphicon glyphicon-shopping-cart"></i>
@@ -93,7 +57,7 @@
 	</a>
 	
 	<a href="sales.php" style="color:black;">
-    <div class="col-md-3">
+    <div class="col-md-4">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-green">
           <i class="glyphicon glyphicon-usd"></i>
@@ -109,17 +73,17 @@
   
   <div class="row">
    <div class="col-md-4">
-     <div class="panel panel-default">
+     <div class="panel panel-header">
        <div class="panel-heading">
          <strong>
-           <span class="glyphicon glyphicon-th"></span>
-           <span>Highest Selling Products</span>
+           <!-- <span class="glyphicon glyphicon-th"></span> -->
+           <span style="font-size:15pt;">Highest Selling Products</span>
          </strong>
        </div>
        <div class="panel-body">
-         <table class="table table-striped table-bordered table-condensed">
+         <table class="table">
           <thead>
-           <tr>
+           <tr style="border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 2px 0px #E6E6E6">
              <th>Title</th>
              <th>Total Sold</th>
              <th>Total Quantity</th>
@@ -139,17 +103,17 @@
      </div>
    </div>
    <div class="col-md-4">
-      <div class="panel panel-default">
+      <div class="panel panel-header">
         <div class="panel-heading">
           <strong>
-            <span class="glyphicon glyphicon-th"></span>
-            <span>LATEST SALES</span>
+            <!-- <span class="glyphicon glyphicon-th"></span> -->
+            <span style="font-size:15pt;">LATEST SALES</span>
           </strong>
         </div>
         <div class="panel-body">
-          <table class="table table-striped table-bordered table-condensed">
+          <table class="table">
        <thead>
-         <tr>
+         <tr style="border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
            <th class="text-center" style="width: 50px;">#</th>
            <th>Product Name</th>
            <th>Date</th>
@@ -176,38 +140,37 @@
    </div>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-default">
+    <div class="panel panel-header">
       <div class="panel-heading">
         <strong>
-          <span class="glyphicon glyphicon-th"></span>
-          <span>Recently Added Products</span>
+          <!-- <span class="glyphicon glyphicon-th"></span> -->
+          <span style="font-size:15pt;">Recently Added Products</span>
         </strong>
       </div>
       <div class="panel-body">
-
-        <div class="list-group">
-      <?php foreach ($recent_products as  $recent_product): ?>
-            <a class="list-group-item clearfix" href="edit_product.php?id=<?php echo    (int)$recent_product['id'];?>">
-                <h4 class="list-group-item-heading">
-                 <?php if($recent_product['media_id'] === '0'): ?>
-                    <img class="img-avatar img-circle" src="uploads/products/no_image.png" alt="">
-                  <?php else: ?>
-                  <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image'];?>" alt="" />
-                <?php endif;?>
-                <?php echo remove_junk(first_character($recent_product['name']));?>
-                  <span class="label label-warning pull-right">
-                 $<?php echo (int)$recent_product['sale_price']; ?>
+        <!-- <div class="list-group"> -->
+          <?php foreach ($recent_products as  $recent_product): ?>
+                <a class="list-group-item clearfix" href="edit_product.php?id=<?php echo    (int)$recent_product['id'];?>">
+                    <h4 class="list-group-item-heading">
+                    <?php if($recent_product['media_id'] === '0'): ?>
+                        <img class="img-avatar img-circle" src="uploads/products/no_image.png" alt="">
+                      <?php else: ?>
+                      <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image'];?>" alt="" />
+                    <?php endif;?>
+                    <?php echo remove_junk(first_character($recent_product['name']));?>
+                      <span class="label label-warning pull-right">
+                    $<?php echo (int)$recent_product['sale_price']; ?>
+                      </span>
+                    </h4>
+                    <span class="list-group-item-text pull-right">
+                    <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
                   </span>
-                </h4>
-                <span class="list-group-item-text pull-right">
-                <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
-              </span>
-          </a>
-      <?php endforeach; ?>
+              </a>
+          <?php endforeach; ?>
+        <!-- </div> -->
+      </div>
     </div>
   </div>
- </div>
-</div>
  </div>
   <div class="row">
 
