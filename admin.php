@@ -59,7 +59,7 @@
 	<a href="sales.php" style="color:black;">
     <div class="col-md-4">
        <div class="panel panel-box clearfix">
-         <div class="panel-icon pull-left bg-green">
+         <div class="panel-icon pull-left bg-yellow">
           <i class="glyphicon glyphicon-usd"></i>
         </div>
         <div class="panel-value pull-right">
@@ -73,8 +73,8 @@
   
   <div class="row">
    <div class="col-md-4">
-     <div class="panel panel-header" style="border-color:#FF7857">
-       <div class="panel-heading" style="background-color:#FF7857;">
+     <div class="panel panel-header" style="border-color:#008060">
+       <div class="panel-heading" style="background-color:#008060;">
          <strong>
            <!-- <span class="glyphicon glyphicon-th"></span> -->
            <span style="font-size:20px; color:white">Highest Selling Products</span>
@@ -103,8 +103,8 @@
      </div>
    </div>
    <div class="col-md-4">
-      <div class="panel panel-header" style="border-color:#7a83ee">
-        <div class="panel-heading" style="background-color:#7a83ee">
+      <div class="panel panel-header" style="border-color:#008060">
+        <div class="panel-heading" style="background-color:#008060">
           <strong>
             <!-- <span class="glyphicon glyphicon-th"></span> -->
             <span style="font-size:20px; color:white">Latest sales</span>
