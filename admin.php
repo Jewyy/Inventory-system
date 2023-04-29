@@ -22,13 +22,12 @@
   <div class="row">
     <div class="panel-heading">
         <strong>
-          <span style="font-size:22pt;">All Categories</span>
+          <span style="font-size:22pt;">Dashboard</span>
        </strong>
       </div>
     </div>
 	<a href="categorie.php" style="color:black;">
   <div class="panel-header">
- 
     <div class="col-md-4">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-red">
@@ -69,14 +68,10 @@
        </div>
     </div>
 	</a>
-</div>
-  
-  <div class="row">
    <div class="col-md-4">
      <div class="panel panel-header" style="border-color:#FF7857">
        <div class="panel-heading" style="background-color:#FF7857;">
          <strong>
-           <!-- <span class="glyphicon glyphicon-th"></span> -->
            <span style="font-size:20px; color:white">Highest Selling Products</span>
          </strong>
        </div>
@@ -106,7 +101,6 @@
       <div class="panel panel-header" style="border-color:#7a83ee">
         <div class="panel-heading" style="background-color:#7a83ee">
           <strong>
-            <!-- <span class="glyphicon glyphicon-th"></span> -->
             <span style="font-size:20px; color:white">Latest sales</span>
           </strong>
         </div>
@@ -143,12 +137,10 @@
     <div class="panel panel-header"  style="border-color:#008060">
       <div class="panel-heading"  style="background-color:#008060">
         <strong>
-          <!-- <span class="glyphicon glyphicon-th"></span> -->
           <span style="font-size:20px; color:white">Recently Added Products</span>
         </strong>
       </div>
       <div class="panel-body">
-        <!-- <div class="list-group"> -->
           <?php foreach ($recent_products as  $recent_product): ?>
                 <a class="list-group-item clearfix" href="edit_product.php?id=<?php echo    (int)$recent_product['id'];?>">
                     <h4 class="list-group-item-heading">
@@ -167,14 +159,15 @@
                   </span>
               </a>
           <?php endforeach; ?>
-        <!-- </div> -->
       </div>
     </div>
-  </div>
  </div>
-  <div class="row">
+  
+  
+</div>
+  <!-- <div class="row">
 
-  </div>
+  </div> -->
 
 
 
