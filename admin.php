@@ -29,7 +29,7 @@
 	<a href="categorie.php" style="color:black;">
   <div class="panel-header">
     <div class="col-md-4">
-       <div class="panel panel-box clearfix">
+       <div class="panel panel-box clearfix" style="background-color:#fadad2">
          <div class="panel-icon pull-left bg-red">
           <i class="glyphicon glyphicon-th-large"></i>
         </div>
@@ -43,7 +43,7 @@
 	
 	<a href="product.php" style="color:black;">
     <div class="col-md-4">
-       <div class="panel panel-box clearfix">
+       <div class="panel panel-box clearfix" style="background-color:#d2d5fa">
          <div class="panel-icon pull-left bg-blue2">
           <i class="glyphicon glyphicon-shopping-cart"></i>
         </div>
@@ -56,8 +56,8 @@
 	</a>
 	
 	<a href="sales.php" style="color:black;">
-    <div class="col-md-4">
-       <div class="panel panel-box clearfix">
+    <div class="col-md-4" style="background-color:white">
+       <div class="panel panel-box clearfix" style="background-color:#fce69f;  ">
          <div class="panel-icon pull-left bg-yellow">
           <i class="glyphicon glyphicon-usd"></i>
         </div>
