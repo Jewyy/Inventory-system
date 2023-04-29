@@ -54,9 +54,9 @@ $sales = find_all_sale();
           <tr style="height:60px; border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 3px 0px #E6E6E6">
             <th class="sales-tab" style="width: 20px;">No.</th>
             <th class="sales-tab" style="width: 25px;"> Product name </th>
-            <th class="sales-tab" style="width: 10%;"> Quantity</th>
-            <th class="sales-tab" style="width: 10%;"> Date </th>
-            <th class="sales-tab" style="width: 10%;"> Actions </th>
+            <th class="sales-tab" style="width: 5%;"> Quantity</th>
+            <th class="sales-tab" style="width: 5%;"> Date </th>
+            <th class="sales-tab" style="width: 5%;"> Actions </th>
           </tr>
         </thead>
         <tbody>
