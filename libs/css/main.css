@@ -482,6 +482,7 @@ color: #8594A6;
 font-style: SemiBold;
 }
 .product-table{
+  width: 100%;
 border: none;
 padding-bottom: 50px;
 padding-top: 100px;
