@@ -10,7 +10,7 @@
  $c_user          = count_by_id('users');
  $products_sold   = find_higest_saleing_product('10');
  $recent_products = find_recent_product_added('5');
- $recent_sales    = find_recent_sale_added('5')
+ $recent_sales    = find_recent_sale_added('5');
 ?>
 <?php include_once('layouts/header.php'); ?>
 
@@ -80,7 +80,7 @@
           <thead>
            <tr style="border-bottom:solid;  border-color:#D3D3D3; box-shadow:0px 2px 0px #E6E6E6">
              <th>Title</th>
-             <th>Total Sold</th>
+             <th>Total Order</th>
              <th>Total Quantity</th>
            <tr>
           </thead>
@@ -111,7 +111,7 @@
            <th class="text-center" style="width: 50px;">#</th>
            <th>Product Name</th>
            <th>Date</th>
-           <th>Total Sale</th>
+           <th>Quantity</th>
          </tr>
        </thead>
        <tbody>
@@ -124,7 +124,7 @@
            </a>
            </td>
            <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
-           <td>$<?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
+           <td><?php echo remove_junk(first_character($recent_sale['qty'])); ?></td>
         </tr>
 
        <?php endforeach; ?>
@@ -151,7 +151,7 @@
                     <?php endif;?>
                     <?php echo remove_junk(first_character($recent_product['name']));?>
                       <span class="label label-warning pull-right">
-                    $<?php echo (int)$recent_product['sale_price']; ?>
+                    <?php echo (int)$recent_product['sale_price']; ?> ฿ 
                       </span>
                     </h4>
                     <span class="list-group-item-text pull-right">
